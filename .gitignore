@@ -1,0 +1,12 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+data/bbc-text.csv
+data/cache/
+models/*.joblib
+models/*.pkl
+.cursor/
