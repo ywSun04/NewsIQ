@@ -3,14 +3,14 @@
   "chunk_words": 200,
   "overlap_words": 40,
   "top_k": 3,
-  "abstain_cosine": 0.35,
+  "abstain_cosine": 0.5,
   "n_chunks": 5968,
   "recall_at_3": 0.825,
   "grounded_hits": 33,
   "grounded_n": 40,
-  "would_abstain_all": 1,
-  "would_abstain_grounded": 1,
-  "would_abstain_adversarial": 0,
+  "would_abstain_all": 13,
+  "would_abstain_grounded": 5,
+  "would_abstain_adversarial": 8,
   "questions": [
     {
       "id": "rag-001",
@@ -490,7 +490,7 @@
       ],
       "hit_at_3": true,
       "best_cosine": 0.4423,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-021",
@@ -586,7 +586,7 @@
       ],
       "hit_at_3": true,
       "best_cosine": 0.3671,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-025",
@@ -634,7 +634,7 @@
       ],
       "hit_at_3": true,
       "best_cosine": 0.4005,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-027",
@@ -850,7 +850,7 @@
       ],
       "hit_at_3": false,
       "best_cosine": 0.4859,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-036",
@@ -992,7 +992,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.3513,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-042",
@@ -1014,7 +1014,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.4002,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-043",
@@ -1036,7 +1036,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.4651,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-044",
@@ -1058,7 +1058,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.3771,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-045",
@@ -1102,7 +1102,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.4812,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-047",
@@ -1124,7 +1124,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.3501,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-048",
@@ -1146,7 +1146,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.4495,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-049",
@@ -1168,7 +1168,7 @@
       ],
       "hit_at_3": null,
       "best_cosine": 0.3844,
-      "would_abstain": false
+      "would_abstain": true
     },
     {
       "id": "rag-050",
@@ -1192,5 +1192,6 @@
       "best_cosine": 0.5034,
       "would_abstain": false
     }
-  ]
+  ],
+  "abstain_rule": "Frozen before generation. Abstain when the best chunk cosine is below 0.50. Chosen because 0.35 stopped 0 of 10 adversarial questions, while 0.50 stops 8 of 10 and abstains on 5 of 40 grounded questions. Not retuned after answers are generated."
 }

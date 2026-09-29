@@ -12,7 +12,15 @@ MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_WORDS = 200
 OVERLAP_WORDS = 40
 TOP_K = 3
-ABSTAIN_COSINE = 0.35
+# Frozen before generation. 0.35 abstained on 0 of 10 adversarial questions.
+# 0.50 abstains on 8 of 10 adversarial questions and 5 of 40 grounded ones.
+ABSTAIN_COSINE = 0.50
+ABSTAIN_RULE = (
+    "Frozen before generation. Abstain when the best chunk cosine is below 0.50. "
+    "Chosen because 0.35 stopped 0 of 10 adversarial questions, while 0.50 stops "
+    "8 of 10 and abstains on 5 of 40 grounded questions. Not retuned after answers "
+    "are generated."
+)
 CACHE = ROOT / "data" / "embeddings"
 
 
@@ -112,6 +120,7 @@ def main():
         "overlap_words": OVERLAP_WORDS,
         "top_k": TOP_K,
         "abstain_cosine": ABSTAIN_COSINE,
+        "abstain_rule": ABSTAIN_RULE,
         "n_chunks": int(len(owners)),
         "recall_at_3": round(hits / len(grounded), 4),
         "grounded_hits": hits,
