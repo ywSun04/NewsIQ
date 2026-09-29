@@ -83,6 +83,7 @@ def top_hits(query_vector, vectors, owners):
     for index in order:
         hits.append({
             "article_id": int(owners[index]),
+            "chunk_index": int(index),
             "cosine": round(float(scores[index]), 4),
         })
     return hits

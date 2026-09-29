@@ -1,0 +1,1977 @@
+{
+  "generator": "openai/gpt-4o-mini",
+  "temperature": 0,
+  "max_tokens": 400,
+  "abstain_cosine": 0.5,
+  "price_card_usd_per_million": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "n": 50,
+  "answer_correctness": 0.74,
+  "grounded_correct": 27,
+  "grounded_n": 40,
+  "adversarial_correct": 10,
+  "adversarial_n": 10,
+  "retrieval_abstained": 13,
+  "model_abstained": 3,
+  "calls": 37,
+  "prompt_tokens": 27381,
+  "completion_tokens": 1032,
+  "usd": 0.004726,
+  "mean_usd_per_call": 0.000128,
+  "questions": [
+    {
+      "id": "rag-001",
+      "type": "grounded",
+      "gold_answer": "egypt",
+      "gold_article_ids": [
+        261
+      ],
+      "best_cosine": 0.7839,
+      "top3": [
+        {
+          "article_id": 261,
+          "cosine": 0.7839
+        },
+        {
+          "article_id": 1108,
+          "cosine": 0.4724
+        },
+        {
+          "article_id": 489,
+          "cosine": 0.465
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "egypt",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 261,
+          "category": "business",
+          "cosine": 0.7839,
+          "snippet": "burren awarded egyptian contracts british energy firm burren energy has been awarded two potentially lucrative oil exploration contracts in egypt. the company successfully bid for the two contracts granted by government owned oil firms cove"
+        }
+      ],
+      "prompt_tokens": 733,
+      "completion_tokens": 26,
+      "usd": 0.000126,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"egypt\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-002",
+      "type": "grounded",
+      "gold_answer": "finian o sullivan",
+      "gold_article_ids": [
+        261
+      ],
+      "best_cosine": 0.529,
+      "top3": [
+        {
+          "article_id": 261,
+          "cosine": 0.529
+        },
+        {
+          "article_id": 1952,
+          "cosine": 0.4643
+        },
+        {
+          "article_id": 1577,
+          "cosine": 0.3932
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "finian o sullivan",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 261,
+          "category": "business",
+          "cosine": 0.529,
+          "snippet": "burren awarded egyptian contracts british energy firm burren energy has been awarded two potentially lucrative oil exploration contracts in egypt. the company successfully bid for the two contracts granted by government owned oil firms cove"
+        }
+      ],
+      "prompt_tokens": 574,
+      "completion_tokens": 29,
+      "usd": 0.000103,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"finian o sullivan\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-003",
+      "type": "grounded",
+      "gold_answer": "eliot spitzer",
+      "gold_article_ids": [
+        34
+      ],
+      "best_cosine": 0.5793,
+      "top3": [
+        {
+          "article_id": 1299,
+          "cosine": 0.5793
+        },
+        {
+          "article_id": 896,
+          "cosine": 0.5793
+        },
+        {
+          "article_id": 904,
+          "cosine": 0.5423
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "eliot spitzer",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1299,
+          "category": "business",
+          "cosine": 0.5793,
+          "snippet": "troubled marsh under sec scrutiny the us stock market regulator is investigating troubled insurance broker marsh & mclennan s shareholder transactions the firm has said. the securities and exchange commission has asked for information about"
+        },
+        {
+          "passage": 2,
+          "article_id": 896,
+          "category": "business",
+          "cosine": 0.5793,
+          "snippet": "troubled marsh under sec scrutiny the us stock market regulator is investigating troubled insurance broker marsh & mclennan s shareholder transactions the firm has said. the securities and exchange commission has asked for information about"
+        },
+        {
+          "passage": 3,
+          "article_id": 904,
+          "category": "business",
+          "cosine": 0.5423,
+          "snippet": "marsh executive in guilty plea an executive at us insurance firm marsh & mclennan has pleaded guilty to criminal charges in connection with an ongoing fraud and bid-rigging probe. new york attorney general elliot spitzer said senior vice pr"
+        }
+      ],
+      "prompt_tokens": 848,
+      "completion_tokens": 34,
+      "usd": 0.000148,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"eliot spitzer\",\n  \"citation_indexes\": [1, 2, 3]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-004",
+      "type": "grounded",
+      "gold_answer": "joshua bewlay",
+      "gold_article_ids": [
+        34
+      ],
+      "best_cosine": 0.745,
+      "top3": [
+        {
+          "article_id": 34,
+          "cosine": 0.745
+        },
+        {
+          "article_id": 904,
+          "cosine": 0.7265
+        },
+        {
+          "article_id": 768,
+          "cosine": 0.6676
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "joshua bewlay",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 34,
+          "category": "business",
+          "cosine": 0.745,
+          "snippet": "insurance bosses plead guilty another three us insurance executives have pleaded guilty to fraud charges stemming from an ongoing investigation into industry malpractice. two executives from american international group (aig) and one from m"
+        }
+      ],
+      "prompt_tokens": 753,
+      "completion_tokens": 29,
+      "usd": 0.00013,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"joshua bewlay\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-005",
+      "type": "grounded",
+      "gold_answer": "lvmh",
+      "gold_article_ids": [
+        286
+      ],
+      "best_cosine": 0.6461,
+      "top3": [
+        {
+          "article_id": 286,
+          "cosine": 0.6461
+        },
+        {
+          "article_id": 311,
+          "cosine": 0.6219
+        },
+        {
+          "article_id": 483,
+          "cosine": 0.4009
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "lvmh",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 286,
+          "category": "business",
+          "cosine": 0.6461,
+          "snippet": "us firm bids for lacroix label a us firm has said it is in final negotiations with luxury goods group lvmh to buy the loss-making christian lacroix haute-couture house. paris-based lvmh has been selling non-core businesses and focusing on i"
+        }
+      ],
+      "prompt_tokens": 740,
+      "completion_tokens": 27,
+      "usd": 0.000127,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"lvmh\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-006",
+      "type": "grounded",
+      "gold_answer": "simon falic",
+      "gold_article_ids": [
+        286
+      ],
+      "best_cosine": 0.664,
+      "top3": [
+        {
+          "article_id": 311,
+          "cosine": 0.664
+        },
+        {
+          "article_id": 286,
+          "cosine": 0.6421
+        },
+        {
+          "article_id": 483,
+          "cosine": 0.3862
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "simon falic told the reuters news agency",
+      "citations": [
+        {
+          "passage": 2,
+          "article_id": 286,
+          "category": "business",
+          "cosine": 0.6421,
+          "snippet": "us firm bids for lacroix label a us firm has said it is in final negotiations with luxury goods group lvmh to buy the loss-making christian lacroix haute-couture house. paris-based lvmh has been selling non-core businesses and focusing on i"
+        }
+      ],
+      "prompt_tokens": 742,
+      "completion_tokens": 34,
+      "usd": 0.000132,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"simon falic told the reuters news agency\",\n  \"citation_indexes\": [2]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-007",
+      "type": "grounded",
+      "gold_answer": "volkswagen",
+      "gold_article_ids": [
+        725
+      ],
+      "best_cosine": 0.615,
+      "top3": [
+        {
+          "article_id": 725,
+          "cosine": 0.615
+        },
+        {
+          "article_id": 1773,
+          "cosine": 0.4663
+        },
+        {
+          "article_id": 205,
+          "cosine": 0.4561
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "vw",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 725,
+          "category": "business",
+          "cosine": 0.615,
+          "snippet": "vw considers opening indian plant volkswagen is considering building a car factory in india but said it had yet to make a final decision. the german giant said it was studying the possibility of opening an assembly plant in the country but "
+        }
+      ],
+      "prompt_tokens": 696,
+      "completion_tokens": 25,
+      "usd": 0.000119,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"vw\",\n  \"citation_indexes\": [1]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-008",
+      "type": "grounded",
+      "gold_answer": "savoy",
+      "gold_article_ids": [
+        1884
+      ],
+      "best_cosine": 0.6351,
+      "top3": [
+        {
+          "article_id": 1884,
+          "cosine": 0.6351
+        },
+        {
+          "article_id": 1295,
+          "cosine": 0.4525
+        },
+        {
+          "article_id": 1487,
+          "cosine": 0.4513
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "savoy hotel",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1884,
+          "category": "business",
+          "cosine": 0.6351,
+          "snippet": "saudi investor picks up the savoy london s famous savoy hotel has been sold to a group combining saudi billionaire investor prince alwaleed bin talal and a unit of hbos bank. financial details of the deal which includes the nearby simpson s"
+        }
+      ],
+      "prompt_tokens": 560,
+      "completion_tokens": 27,
+      "usd": 0.0001,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"savoy hotel\",\n  \"citation_indexes\": [1]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-009",
+      "type": "grounded",
+      "gold_answer": "mukesh ambani",
+      "gold_article_ids": [
+        593
+      ],
+      "best_cosine": 0.6909,
+      "top3": [
+        {
+          "article_id": 458,
+          "cosine": 0.6909
+        },
+        {
+          "article_id": 593,
+          "cosine": 0.6442
+        },
+        {
+          "article_id": 458,
+          "cosine": 0.5875
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "mukesh ambani",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 458,
+          "category": "business",
+          "cosine": 0.6909,
+          "snippet": "has accused anand jain a confidant of his brother mukesh of playing a negative role in the ambani family and being responsible for the trouble between the brothers. on wednesday the board of reliance energy another reliance group company re"
+        },
+        {
+          "passage": 2,
+          "article_id": 593,
+          "category": "business",
+          "cosine": 0.6442,
+          "snippet": "share boost for feud-hit reliance the board of indian conglomerate reliance has agreed a share buy-back to counter the effects of a power struggle in the controlling family. the buy-back is a victory for chairman mukesh ambani whose idea it"
+        }
+      ],
+      "prompt_tokens": 779,
+      "completion_tokens": 32,
+      "usd": 0.000136,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"mukesh ambani\",\n  \"citation_indexes\": [1, 2]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-010",
+      "type": "grounded",
+      "gold_answer": "2002",
+      "gold_article_ids": [
+        593
+      ],
+      "best_cosine": 0.6537,
+      "top3": [
+        {
+          "article_id": 1180,
+          "cosine": 0.6537
+        },
+        {
+          "article_id": 458,
+          "cosine": 0.6449
+        },
+        {
+          "article_id": 458,
+          "cosine": 0.6093
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "2002",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1180,
+          "category": "business",
+          "cosine": 0.6537,
+          "snippet": "reliance unit loses anil ambani anil ambani the younger of the two brothers in charge of india s largest private company has resigned from running its petrochemicals subsidiary. the move is likely to be seen as the latest twist in a feud be"
+        },
+        {
+          "passage": 2,
+          "article_id": 458,
+          "category": "business",
+          "cosine": 0.6449,
+          "snippet": "has accused anand jain a confidant of his brother mukesh of playing a negative role in the ambani family and being responsible for the trouble between the brothers. on wednesday the board of reliance energy another reliance group company re"
+        }
+      ],
+      "prompt_tokens": 833,
+      "completion_tokens": 29,
+      "usd": 0.000142,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"2002\",\n  \"citation_indexes\": [1, 2]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-011",
+      "type": "grounded",
+      "gold_answer": "400m euros",
+      "gold_article_ids": [
+        765
+      ],
+      "best_cosine": 0.7685,
+      "top3": [
+        {
+          "article_id": 765,
+          "cosine": 0.7685
+        },
+        {
+          "article_id": 973,
+          "cosine": 0.4671
+        },
+        {
+          "article_id": 1287,
+          "cosine": 0.4482
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "400m euros",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 765,
+          "category": "business",
+          "cosine": 0.7685,
+          "snippet": "lufthansa flies back to profit german airline lufthansa has returned to profit in 2004 after posting huge losses in 2003. in a preliminary report the airline announced net profits of 400m euros ($527.61m; \u00a3274.73m) compared with a loss of 9"
+        }
+      ],
+      "prompt_tokens": 602,
+      "completion_tokens": 27,
+      "usd": 0.000107,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"400m euros\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-012",
+      "type": "grounded",
+      "gold_answer": "23 march",
+      "gold_article_ids": [
+        765
+      ],
+      "best_cosine": 0.5386,
+      "top3": [
+        {
+          "article_id": 765,
+          "cosine": 0.5386
+        },
+        {
+          "article_id": 1474,
+          "cosine": 0.3618
+        },
+        {
+          "article_id": 1677,
+          "cosine": 0.3575
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "23 march",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 765,
+          "category": "business",
+          "cosine": 0.5386,
+          "snippet": "lufthansa flies back to profit german airline lufthansa has returned to profit in 2004 after posting huge losses in 2003. in a preliminary report the airline announced net profits of 400m euros ($527.61m; \u00a3274.73m) compared with a loss of 9"
+        }
+      ],
+      "prompt_tokens": 648,
+      "completion_tokens": 26,
+      "usd": 0.000113,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"23 march\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-013",
+      "type": "grounded",
+      "gold_answer": "chalone",
+      "gold_article_ids": [
+        1618
+      ],
+      "best_cosine": 0.7606,
+      "top3": [
+        {
+          "article_id": 1618,
+          "cosine": 0.7606
+        },
+        {
+          "article_id": 1456,
+          "cosine": 0.5096
+        },
+        {
+          "article_id": 1310,
+          "cosine": 0.5049
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "chalone",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1618,
+          "category": "business",
+          "cosine": 0.7606,
+          "snippet": "diageo to buy us wine firm diageo the world s biggest spirits company has agreed to buy californian wine company chalone for $260m (\u00a3134m) in an all-cash deal. although diageo s best-known brands include smirnoff vodka and guinness stout it"
+        }
+      ],
+      "prompt_tokens": 845,
+      "completion_tokens": 26,
+      "usd": 0.000142,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"chalone\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-014",
+      "type": "grounded",
+      "gold_answer": "ivan menezes",
+      "gold_article_ids": [
+        1618
+      ],
+      "best_cosine": 0.3256,
+      "top3": [
+        {
+          "article_id": 1618,
+          "cosine": 0.3256
+        },
+        {
+          "article_id": 557,
+          "cosine": 0.2992
+        },
+        {
+          "article_id": 1380,
+          "cosine": 0.2959
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": false
+    },
+    {
+      "id": "rag-015",
+      "type": "grounded",
+      "gold_answer": "2008",
+      "gold_article_ids": [
+        665
+      ],
+      "best_cosine": 0.5302,
+      "top3": [
+        {
+          "article_id": 295,
+          "cosine": 0.5302
+        },
+        {
+          "article_id": 295,
+          "cosine": 0.5123
+        },
+        {
+          "article_id": 813,
+          "cosine": 0.5092
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "2009",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 295,
+          "category": "business",
+          "cosine": 0.5302,
+          "snippet": "an extra $2bn. the budget does not include the cost of running military operations in iraq and afghanistan for which the administration in expected to seek an extra $80bn from congress later this year. also not featuring in the proposals is"
+        }
+      ],
+      "prompt_tokens": 777,
+      "completion_tokens": 26,
+      "usd": 0.000132,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"2009\",\n  \"citation_indexes\": [1]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-016",
+      "type": "grounded",
+      "gold_answer": "rick waggoner",
+      "gold_article_ids": [
+        2196
+      ],
+      "best_cosine": 0.5068,
+      "top3": [
+        {
+          "article_id": 285,
+          "cosine": 0.5068
+        },
+        {
+          "article_id": 2196,
+          "cosine": 0.4599
+        },
+        {
+          "article_id": 2196,
+          "cosine": 0.455
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "rick waggoner",
+      "citations": [
+        {
+          "passage": 2,
+          "article_id": 2196,
+          "category": "business",
+          "cosine": 0.4599,
+          "snippet": "gm issues 2005 profits warning general motors has warned that it expects earnings this year be lower than in 2004. the world s biggest car maker is grappling with losses in its european business and weak us sales. gm said higher healthcare "
+        }
+      ],
+      "prompt_tokens": 828,
+      "completion_tokens": 28,
+      "usd": 0.000141,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"rick waggoner\",\n  \"citation_indexes\": [2]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-017",
+      "type": "grounded",
+      "gold_answer": "19 january",
+      "gold_article_ids": [
+        2196
+      ],
+      "best_cosine": 0.6723,
+      "top3": [
+        {
+          "article_id": 2196,
+          "cosine": 0.6723
+        },
+        {
+          "article_id": 769,
+          "cosine": 0.5946
+        },
+        {
+          "article_id": 2196,
+          "cosine": 0.5607
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "19 January",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 2196,
+          "category": "business",
+          "cosine": 0.6723,
+          "snippet": "gm issues 2005 profits warning general motors has warned that it expects earnings this year be lower than in 2004. the world s biggest car maker is grappling with losses in its european business and weak us sales. gm said higher healthcare "
+        }
+      ],
+      "prompt_tokens": 864,
+      "completion_tokens": 26,
+      "usd": 0.000145,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"19 January\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-018",
+      "type": "grounded",
+      "gold_answer": "jamie foxx",
+      "gold_article_ids": [
+        2019
+      ],
+      "best_cosine": 0.7033,
+      "top3": [
+        {
+          "article_id": 2019,
+          "cosine": 0.7033
+        },
+        {
+          "article_id": 1499,
+          "cosine": 0.6254
+        },
+        {
+          "article_id": 147,
+          "cosine": 0.5881
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "jamie foxx",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 2019,
+          "category": "entertainment",
+          "cosine": 0.7033,
+          "snippet": "actor foxx sees globe nominations us actor jamie foxx has been given two nominations for golden globe awards with meryl streep morgan freeman and cate blanchett also up for prizes. the stars were shortlisted on monday for supporting roles w"
+        }
+      ],
+      "prompt_tokens": 681,
+      "completion_tokens": 28,
+      "usd": 0.000119,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"jamie foxx\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-019",
+      "type": "grounded",
+      "gold_answer": "16 january",
+      "gold_article_ids": [
+        2019
+      ],
+      "best_cosine": 0.5008,
+      "top3": [
+        {
+          "article_id": 2019,
+          "cosine": 0.5008
+        },
+        {
+          "article_id": 549,
+          "cosine": 0.4744
+        },
+        {
+          "article_id": 113,
+          "cosine": 0.4744
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "16 January",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 2019,
+          "category": "entertainment",
+          "cosine": 0.5008,
+          "snippet": "actor foxx sees globe nominations us actor jamie foxx has been given two nominations for golden globe awards with meryl streep morgan freeman and cate blanchett also up for prizes. the stars were shortlisted on monday for supporting roles w"
+        }
+      ],
+      "prompt_tokens": 521,
+      "completion_tokens": 26,
+      "usd": 9.4e-05,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"16 January\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-020",
+      "type": "grounded",
+      "gold_answer": "7 march 1985",
+      "gold_article_ids": [
+        528
+      ],
+      "best_cosine": 0.4423,
+      "top3": [
+        {
+          "article_id": 1417,
+          "cosine": 0.4423
+        },
+        {
+          "article_id": 528,
+          "cosine": 0.3799
+        },
+        {
+          "article_id": 814,
+          "cosine": 0.3609
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": false
+    },
+    {
+      "id": "rag-021",
+      "type": "grounded",
+      "gold_answer": "17",
+      "gold_article_ids": [
+        1575
+      ],
+      "best_cosine": 0.6805,
+      "top3": [
+        {
+          "article_id": 1575,
+          "cosine": 0.6805
+        },
+        {
+          "article_id": 865,
+          "cosine": 0.5549
+        },
+        {
+          "article_id": 1888,
+          "cosine": 0.5391
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "17-year-old",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1575,
+          "category": "entertainment",
+          "cosine": 0.6805,
+          "snippet": "soul sensation ready for awards south west teenage singing sensation joss stone has been nominated in three categories in wednesday s brit awards. the 17-year-old from a small east devon village near cullumpton received nominations for best"
+        },
+        {
+          "passage": 3,
+          "article_id": 1888,
+          "category": "entertainment",
+          "cosine": 0.5391,
+          "snippet": "second on the list with \u00a3800m - up \u00a340m on last year. andrew lloyd-webber s wealth rose an estimated \u00a3300m on last year to \u00a3700m while theatre impresario sir cameron mackintosh s fortune rose from \u00a3340m to \u00a3400m. his recent hits have includ"
+        }
+      ],
+      "prompt_tokens": 774,
+      "completion_tokens": 30,
+      "usd": 0.000134,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"17-year-old\",\n  \"citation_indexes\": [1, 3]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-022",
+      "type": "grounded",
+      "gold_answer": "steve greenberg",
+      "gold_article_ids": [
+        1575
+      ],
+      "best_cosine": 0.5658,
+      "top3": [
+        {
+          "article_id": 1575,
+          "cosine": 0.5658
+        },
+        {
+          "article_id": 865,
+          "cosine": 0.5305
+        },
+        {
+          "article_id": 865,
+          "cosine": 0.5281
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "steve greenberg",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1575,
+          "category": "entertainment",
+          "cosine": 0.5658,
+          "snippet": "soul sensation ready for awards south west teenage singing sensation joss stone has been nominated in three categories in wednesday s brit awards. the 17-year-old from a small east devon village near cullumpton received nominations for best"
+        }
+      ],
+      "prompt_tokens": 786,
+      "completion_tokens": 28,
+      "usd": 0.000135,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"steve greenberg\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-023",
+      "type": "grounded",
+      "gold_answer": "christian slater",
+      "gold_article_ids": [
+        120
+      ],
+      "best_cosine": 0.6173,
+      "top3": [
+        {
+          "article_id": 120,
+          "cosine": 0.6173
+        },
+        {
+          "article_id": 733,
+          "cosine": 0.4519
+        },
+        {
+          "article_id": 233,
+          "cosine": 0.4082
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "christian slater",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 120,
+          "category": "entertainment",
+          "cosine": 0.6173,
+          "snippet": "slater to star in broadway play actor christian slater is stepping into the role of tom in the broadway revival of the glass menagerie. slater 35 is replacing actor dallas roberts in the tennessee williams drama which opens next month. no r"
+        }
+      ],
+      "prompt_tokens": 696,
+      "completion_tokens": 28,
+      "usd": 0.000121,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"christian slater\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-024",
+      "type": "grounded",
+      "gold_answer": "15 march",
+      "gold_article_ids": [
+        120
+      ],
+      "best_cosine": 0.3671,
+      "top3": [
+        {
+          "article_id": 120,
+          "cosine": 0.3671
+        },
+        {
+          "article_id": 67,
+          "cosine": 0.347
+        },
+        {
+          "article_id": 2114,
+          "cosine": 0.3458
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": false
+    },
+    {
+      "id": "rag-025",
+      "type": "grounded",
+      "gold_answer": "national treasure",
+      "gold_article_ids": [
+        296
+      ],
+      "best_cosine": 0.6413,
+      "top3": [
+        {
+          "article_id": 296,
+          "cosine": 0.6413
+        },
+        {
+          "article_id": 559,
+          "cosine": 0.5369
+        },
+        {
+          "article_id": 1654,
+          "cosine": 0.514
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "national treasure",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 296,
+          "category": "entertainment",
+          "cosine": 0.6413,
+          "snippet": "cage film s third week at us top nicolas cage movie national treasure has topped the us and canada box office for the third week in a row. national treasure made $17.1m (\u00a38.8m) in ticket sales from friday to sunday according to studio estim"
+        }
+      ],
+      "prompt_tokens": 918,
+      "completion_tokens": 26,
+      "usd": 0.000153,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"national treasure\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-026",
+      "type": "grounded",
+      "gold_answer": "malibu",
+      "gold_article_ids": [
+        2090
+      ],
+      "best_cosine": 0.4005,
+      "top3": [
+        {
+          "article_id": 210,
+          "cosine": 0.4005
+        },
+        {
+          "article_id": 2090,
+          "cosine": 0.3677
+        },
+        {
+          "article_id": 1559,
+          "cosine": 0.3482
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": false
+    },
+    {
+      "id": "rag-027",
+      "type": "grounded",
+      "gold_answer": "hayao miyazaki",
+      "gold_article_ids": [
+        116
+      ],
+      "best_cosine": 0.7213,
+      "top3": [
+        {
+          "article_id": 1504,
+          "cosine": 0.7213
+        },
+        {
+          "article_id": 116,
+          "cosine": 0.6159
+        },
+        {
+          "article_id": 1058,
+          "cosine": 0.4647
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "hayao miyazaki",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 1504,
+          "category": "entertainment",
+          "cosine": 0.7213,
+          "snippet": "global release for japan hit film oscar-winning animator hayao miyazaki s latest film howl s moving castle is to be released in 50 countries around the world its distributor has said. howl s moving castle set a japanese box office record la"
+        },
+        {
+          "passage": 2,
+          "article_id": 116,
+          "category": "entertainment",
+          "cosine": 0.6159,
+          "snippet": "animation charms japan box office oscar-winning director hayao miyazaki s latest film has set a new japanese box office record with 1.5bn yen ($14.3m) in two days according to reports. howl s moving castle is the follow-up to miyazaki s spi"
+        }
+      ],
+      "prompt_tokens": 849,
+      "completion_tokens": 32,
+      "usd": 0.000147,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"hayao miyazaki\",\n  \"citation_indexes\": [1, 2]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-028",
+      "type": "grounded",
+      "gold_answer": "jerry scoggins",
+      "gold_article_ids": [
+        136
+      ],
+      "best_cosine": 0.7939,
+      "top3": [
+        {
+          "article_id": 136,
+          "cosine": 0.7939
+        },
+        {
+          "article_id": 1166,
+          "cosine": 0.3628
+        },
+        {
+          "article_id": 995,
+          "cosine": 0.3515
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "jerry scoggins",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 136,
+          "category": "entertainment",
+          "cosine": 0.7939,
+          "snippet": "hillbillies singer scoggins dies country and western musician jerry scoggins has died in los angeles at the age of 93 his family has said. scoggins was best remembered for singing the theme tune to popular us tv show the beverly hillbillies"
+        }
+      ],
+      "prompt_tokens": 882,
+      "completion_tokens": 29,
+      "usd": 0.00015,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"jerry scoggins\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-029",
+      "type": "grounded",
+      "gold_answer": "david blunkett",
+      "gold_article_ids": [
+        323
+      ],
+      "best_cosine": 0.6608,
+      "top3": [
+        {
+          "article_id": 323,
+          "cosine": 0.6608
+        },
+        {
+          "article_id": 824,
+          "cosine": 0.6485
+        },
+        {
+          "article_id": 6,
+          "cosine": 0.5776
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "blunkett hints at election call",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 323,
+          "category": "politics",
+          "cosine": 0.6608,
+          "snippet": "blunkett hints at election call ex-home secretary david blunkett has given fresh clues that the general election will be announced on monday. he told bbc radio five live: i m out in my constituency getting ready for what we presume will be "
+        }
+      ],
+      "prompt_tokens": 603,
+      "completion_tokens": 31,
+      "usd": 0.000109,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"blunkett hints at election call\",\n  \"citation_indexes\": [1]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-030",
+      "type": "grounded",
+      "gold_answer": "5 may",
+      "gold_article_ids": [
+        323
+      ],
+      "best_cosine": 0.5804,
+      "top3": [
+        {
+          "article_id": 493,
+          "cosine": 0.5804
+        },
+        {
+          "article_id": 827,
+          "cosine": 0.5804
+        },
+        {
+          "article_id": 978,
+          "cosine": 0.5344
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "5 may",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 493,
+          "category": "politics",
+          "cosine": 0.5804,
+          "snippet": "poll would take place despite speculation about 5 may. mr blair said he was taking nothing for granted ahead of the vote - warning that the tory strategy was to win power via the back door by hinting they were aiming to cut labour s majorit"
+        },
+        {
+          "passage": 2,
+          "article_id": 827,
+          "category": "politics",
+          "cosine": 0.5804,
+          "snippet": "poll would take place despite speculation about 5 may. mr blair said he was taking nothing for granted ahead of the vote - warning that the tory strategy was to win power via the back door by hinting they were aiming to cut labour s majorit"
+        }
+      ],
+      "prompt_tokens": 499,
+      "completion_tokens": 29,
+      "usd": 9.2e-05,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"5 may\",\n  \"citation_indexes\": [1, 2]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-031",
+      "type": "grounded",
+      "gold_answer": "tony blair",
+      "gold_article_ids": [
+        1538
+      ],
+      "best_cosine": 0.6573,
+      "top3": [
+        {
+          "article_id": 748,
+          "cosine": 0.6573
+        },
+        {
+          "article_id": 1538,
+          "cosine": 0.6255
+        },
+        {
+          "article_id": 748,
+          "cosine": 0.5864
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "tony blair",
+      "citations": [
+        {
+          "passage": 2,
+          "article_id": 1538,
+          "category": "politics",
+          "cosine": 0.6255,
+          "snippet": "no election tv debate says blair tony blair has said he will not take part in a tv debate with his political rivals ahead of the next election. we answer this every election campaign and for the reasons i have given before the answer is no "
+        }
+      ],
+      "prompt_tokens": 766,
+      "completion_tokens": 28,
+      "usd": 0.000132,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"tony blair\",\n  \"citation_indexes\": [2]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-032",
+      "type": "grounded",
+      "gold_answer": "robert kilroy-silk",
+      "gold_article_ids": [
+        2221
+      ],
+      "best_cosine": 0.5584,
+      "top3": [
+        {
+          "article_id": 675,
+          "cosine": 0.5584
+        },
+        {
+          "article_id": 1630,
+          "cosine": 0.5491
+        },
+        {
+          "article_id": 1604,
+          "cosine": 0.5473
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "robert kilroy-silk",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 675,
+          "category": "politics",
+          "cosine": 0.5584,
+          "snippet": "kilroy launches veritas party ex-bbc chat show host and east midlands mep robert kilroy-silk has said he wants to change the face of british politics as he launched his new party. mr kilroy-silk who recently quit the uk independence party s"
+        },
+        {
+          "passage": 3,
+          "article_id": 1604,
+          "category": "politics",
+          "cosine": 0.5473,
+          "snippet": "kilroy launches veritas party ex-bbc chat show host and east midlands mep robert kilroy-silk said he wanted to change the face of british politics as he launched his new party. mr kilroy-silk who recently quit the uk independence party said"
+        }
+      ],
+      "prompt_tokens": 697,
+      "completion_tokens": 33,
+      "usd": 0.000124,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"robert kilroy-silk\",\n  \"citation_indexes\": [1, 3]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-033",
+      "type": "grounded",
+      "gold_answer": "ed davey",
+      "gold_article_ids": [
+        197
+      ],
+      "best_cosine": 0.5724,
+      "top3": [
+        {
+          "article_id": 197,
+          "cosine": 0.5724
+        },
+        {
+          "article_id": 1497,
+          "cosine": 0.5158
+        },
+        {
+          "article_id": 2044,
+          "cosine": 0.4862
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "ed davey",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 197,
+          "category": "politics",
+          "cosine": 0.5724,
+          "snippet": "lib dems predict best ever poll the lib dems are set for their best results in both the general election and the local council polls one of their frontbenchers has predicted. local government spokesman ed davey was speaking as the party lau"
+        }
+      ],
+      "prompt_tokens": 789,
+      "completion_tokens": 28,
+      "usd": 0.000135,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"ed davey\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-034",
+      "type": "grounded",
+      "gold_answer": "2.36m",
+      "gold_article_ids": [
+        260
+      ],
+      "best_cosine": 0.7765,
+      "top3": [
+        {
+          "article_id": 260,
+          "cosine": 0.7765
+        },
+        {
+          "article_id": 919,
+          "cosine": 0.6234
+        },
+        {
+          "article_id": 1604,
+          "cosine": 0.5362
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "\u00a32.36m",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 260,
+          "category": "politics",
+          "cosine": 0.7765,
+          "snippet": "ukip outspent labour on eu poll the uk independence party outspent both labour and the liberal democrats in the european elections new figures show. ukip which campaigned on a slogan of say no to europe spent \u00a32.36m on the campaign - second"
+        }
+      ],
+      "prompt_tokens": 811,
+      "completion_tokens": 29,
+      "usd": 0.000139,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"\u00a32.36m\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-035",
+      "type": "grounded",
+      "gold_answer": "lynton crosby",
+      "gold_article_ids": [
+        2046
+      ],
+      "best_cosine": 0.4859,
+      "top3": [
+        {
+          "article_id": 256,
+          "cosine": 0.4859
+        },
+        {
+          "article_id": 516,
+          "cosine": 0.4475
+        },
+        {
+          "article_id": 269,
+          "cosine": 0.4365
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": false
+    },
+    {
+      "id": "rag-036",
+      "type": "grounded",
+      "gold_answer": "al aynsley-green",
+      "gold_article_ids": [
+        48
+      ],
+      "best_cosine": 0.6451,
+      "top3": [
+        {
+          "article_id": 48,
+          "cosine": 0.6451
+        },
+        {
+          "article_id": 48,
+          "cosine": 0.5559
+        },
+        {
+          "article_id": 1543,
+          "cosine": 0.4108
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "prof aynsley-green",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 48,
+          "category": "politics",
+          "cosine": 0.6451,
+          "snippet": "england children s tsar appointed the first children s commissioner for england has been appointed. great ormond street hospital professor of child health al aynsley-green was chosen by the government and will start the \u00a3100 000-a-year job "
+        }
+      ],
+      "prompt_tokens": 682,
+      "completion_tokens": 29,
+      "usd": 0.00012,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"prof aynsley-green\",\n  \"citation_indexes\": [1]\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-037",
+      "type": "grounded",
+      "gold_answer": "jack cunningham",
+      "gold_article_ids": [
+        121
+      ],
+      "best_cosine": 0.5924,
+      "top3": [
+        {
+          "article_id": 35,
+          "cosine": 0.5924
+        },
+        {
+          "article_id": 121,
+          "cosine": 0.5923
+        },
+        {
+          "article_id": 1390,
+          "cosine": 0.5919
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "jack cunningham",
+      "citations": [
+        {
+          "passage": 2,
+          "article_id": 121,
+          "category": "politics",
+          "cosine": 0.5923,
+          "snippet": "jack cunningham to stand down veteran labour mp and former cabinet minister jack cunningham has said he will stand down at the next election. one of the few blair-era ministers to serve under jim callaghan he was given the agriculture portf"
+        },
+        {
+          "passage": 3,
+          "article_id": 1390,
+          "category": "politics",
+          "cosine": 0.5919,
+          "snippet": "labour s cunningham to stand down veteran labour mp and former cabinet minister jack cunningham has said he will stand down at the next election. one of the few blair-era ministers to serve under jim callaghan he was given the agriculture p"
+        }
+      ],
+      "prompt_tokens": 777,
+      "completion_tokens": 30,
+      "usd": 0.000135,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"jack cunningham\",\n  \"citation_indexes\": [2, 3]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-038",
+      "type": "grounded",
+      "gold_answer": "manchester united",
+      "gold_article_ids": [
+        91
+      ],
+      "best_cosine": 0.689,
+      "top3": [
+        {
+          "article_id": 91,
+          "cosine": 0.689
+        },
+        {
+          "article_id": 118,
+          "cosine": 0.4702
+        },
+        {
+          "article_id": 1802,
+          "cosine": 0.4604
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "manchester united",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 91,
+          "category": "sport",
+          "cosine": 0.689,
+          "snippet": "solskjaer raises hopes of return manchester united striker ole gunnar solskjaer said he hoped to return next season following a career-threatening injury to his right knee. the 31-year-old norway international had surgery in sweden in augus"
+        }
+      ],
+      "prompt_tokens": 666,
+      "completion_tokens": 27,
+      "usd": 0.000116,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"manchester united\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-039",
+      "type": "grounded",
+      "gold_answer": "jonny wilkinson",
+      "gold_article_ids": [
+        8
+      ],
+      "best_cosine": 0.6851,
+      "top3": [
+        {
+          "article_id": 1519,
+          "cosine": 0.6851
+        },
+        {
+          "article_id": 1449,
+          "cosine": 0.6706
+        },
+        {
+          "article_id": 1294,
+          "cosine": 0.6239
+        }
+      ],
+      "called_model": true,
+      "abstain": true,
+      "abstain_reason": "model",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 802,
+      "completion_tokens": 21,
+      "usd": 0.000133,
+      "raw": "{\n  \"abstain\": true,\n  \"answer\": \"\",\n  \"citation_indexes\": []\n}",
+      "correct": false
+    },
+    {
+      "id": "rag-040",
+      "type": "grounded",
+      "gold_answer": "idefence",
+      "gold_article_ids": [
+        2102
+      ],
+      "best_cosine": 0.6813,
+      "top3": [
+        {
+          "article_id": 2102,
+          "cosine": 0.6813
+        },
+        {
+          "article_id": 1130,
+          "cosine": 0.5857
+        },
+        {
+          "article_id": 234,
+          "cosine": 0.5107
+        }
+      ],
+      "called_model": true,
+      "abstain": false,
+      "abstain_reason": null,
+      "answer": "idefence",
+      "citations": [
+        {
+          "passage": 1,
+          "article_id": 2102,
+          "category": "tech",
+          "cosine": 0.6813,
+          "snippet": "hacker threat to apple s itunes users of apple s music jukebox itunes need to update the software to avoid a potential security threat. hackers can build malicious playlist files which could crash the program and let them seize control of t"
+        }
+      ],
+      "prompt_tokens": 807,
+      "completion_tokens": 27,
+      "usd": 0.000137,
+      "raw": "{\n  \"abstain\": false,\n  \"answer\": \"idefence\",\n  \"citation_indexes\": [1]\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-041",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.3513,
+      "top3": [
+        {
+          "article_id": 1392,
+          "cosine": 0.3513
+        },
+        {
+          "article_id": 443,
+          "cosine": 0.331
+        },
+        {
+          "article_id": 1120,
+          "cosine": 0.3181
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-042",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.4002,
+      "top3": [
+        {
+          "article_id": 626,
+          "cosine": 0.4002
+        },
+        {
+          "article_id": 1735,
+          "cosine": 0.3919
+        },
+        {
+          "article_id": 1735,
+          "cosine": 0.3878
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-043",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.4651,
+      "top3": [
+        {
+          "article_id": 142,
+          "cosine": 0.4651
+        },
+        {
+          "article_id": 2103,
+          "cosine": 0.4492
+        },
+        {
+          "article_id": 1181,
+          "cosine": 0.4436
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-044",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.3771,
+      "top3": [
+        {
+          "article_id": 577,
+          "cosine": 0.3771
+        },
+        {
+          "article_id": 1777,
+          "cosine": 0.3619
+        },
+        {
+          "article_id": 1939,
+          "cosine": 0.3582
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-045",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.559,
+      "top3": [
+        {
+          "article_id": 1594,
+          "cosine": 0.559
+        },
+        {
+          "article_id": 1809,
+          "cosine": 0.5517
+        },
+        {
+          "article_id": 6,
+          "cosine": 0.5455
+        }
+      ],
+      "called_model": true,
+      "abstain": true,
+      "abstain_reason": "model",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 675,
+      "completion_tokens": 21,
+      "usd": 0.000114,
+      "raw": "{\n  \"abstain\": true,\n  \"answer\": \"\",\n  \"citation_indexes\": []\n}",
+      "correct": true
+    },
+    {
+      "id": "rag-046",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.4812,
+      "top3": [
+        {
+          "article_id": 1892,
+          "cosine": 0.4812
+        },
+        {
+          "article_id": 2126,
+          "cosine": 0.4797
+        },
+        {
+          "article_id": 1788,
+          "cosine": 0.4678
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-047",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.3501,
+      "top3": [
+        {
+          "article_id": 294,
+          "cosine": 0.3501
+        },
+        {
+          "article_id": 294,
+          "cosine": 0.3249
+        },
+        {
+          "article_id": 173,
+          "cosine": 0.3243
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-048",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.4495,
+      "top3": [
+        {
+          "article_id": 1116,
+          "cosine": 0.4495
+        },
+        {
+          "article_id": 1109,
+          "cosine": 0.4374
+        },
+        {
+          "article_id": 836,
+          "cosine": 0.4254
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-049",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.3844,
+      "top3": [
+        {
+          "article_id": 443,
+          "cosine": 0.3844
+        },
+        {
+          "article_id": 1482,
+          "cosine": 0.3774
+        },
+        {
+          "article_id": 1009,
+          "cosine": 0.3706
+        }
+      ],
+      "called_model": false,
+      "abstain": true,
+      "abstain_reason": "retrieval",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usd": 0,
+      "correct": true
+    },
+    {
+      "id": "rag-050",
+      "type": "adversarial",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "best_cosine": 0.5034,
+      "top3": [
+        {
+          "article_id": 1370,
+          "cosine": 0.5034
+        },
+        {
+          "article_id": 809,
+          "cosine": 0.4885
+        },
+        {
+          "article_id": 12,
+          "cosine": 0.4867
+        }
+      ],
+      "called_model": true,
+      "abstain": true,
+      "abstain_reason": "model",
+      "answer": "The corpus does not contain sufficient evidence.",
+      "citations": [],
+      "prompt_tokens": 878,
+      "completion_tokens": 21,
+      "usd": 0.000144,
+      "raw": "{\n  \"abstain\": true,\n  \"answer\": \"\",\n  \"citation_indexes\": []\n}",
+      "correct": true
+    }
+  ]
+}
