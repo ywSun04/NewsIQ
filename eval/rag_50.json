@@ -1,0 +1,487 @@
+{
+  "frozen": true,
+  "written_before_any_model_output": true,
+  "answer_rule": "A grounded item is correct only if the system answers and the normalised answer equals gold_answer. An adversarial item is correct only if the system abstains. Normalisation lowercases text, deletes every character that is not a letter, number, or space, and collapses whitespace.",
+  "questions": [
+    {
+      "id": "rag-001",
+      "type": "grounded",
+      "question": "Which country awarded Burren Energy two new oil exploration contracts?",
+      "gold_answer": "egypt",
+      "gold_article_ids": [
+        261
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-002",
+      "type": "grounded",
+      "question": "Who is the chief executive of Burren Energy?",
+      "gold_answer": "finian o sullivan",
+      "gold_article_ids": [
+        261
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-003",
+      "type": "grounded",
+      "question": "Who led the New York investigation into US insurance malpractice?",
+      "gold_answer": "eliot spitzer",
+      "gold_article_ids": [
+        34
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-004",
+      "type": "grounded",
+      "question": "Which former Marsh executive pleaded guilty to scheming to defraud?",
+      "gold_answer": "joshua bewlay",
+      "gold_article_ids": [
+        34
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-005",
+      "type": "grounded",
+      "question": "Which luxury group is in talks to sell the Christian Lacroix house?",
+      "gold_answer": "lvmh",
+      "gold_article_ids": [
+        286
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-006",
+      "type": "grounded",
+      "question": "Who told Reuters that the Falic Group was buying Christian Lacroix's name?",
+      "gold_answer": "simon falic",
+      "gold_article_ids": [
+        286
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-007",
+      "type": "grounded",
+      "question": "Which carmaker is considering an assembly plant in Visakhapatnam?",
+      "gold_answer": "volkswagen",
+      "gold_article_ids": [
+        725
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-008",
+      "type": "grounded",
+      "question": "Which London hotel was sold to Prince Alwaleed's group?",
+      "gold_answer": "savoy",
+      "gold_article_ids": [
+        1884
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-009",
+      "type": "grounded",
+      "question": "Who chairs the Indian conglomerate Reliance?",
+      "gold_answer": "mukesh ambani",
+      "gold_article_ids": [
+        593
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-010",
+      "type": "grounded",
+      "question": "In which year did Reliance founder Dhirubhai Ambani die?",
+      "gold_answer": "2002",
+      "gold_article_ids": [
+        593
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-011",
+      "type": "grounded",
+      "question": "What net profit did Lufthansa report for 2004?",
+      "gold_answer": "400m euros",
+      "gold_article_ids": [
+        765
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-012",
+      "type": "grounded",
+      "question": "On what date will Lufthansa give the full details of its 2004 results?",
+      "gold_answer": "23 march",
+      "gold_article_ids": [
+        765
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-013",
+      "type": "grounded",
+      "question": "Which Californian wine company has Diageo agreed to buy?",
+      "gold_answer": "chalone",
+      "gold_article_ids": [
+        1618
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-014",
+      "type": "grounded",
+      "question": "Who is president of Diageo North America?",
+      "gold_answer": "ivan menezes",
+      "gold_article_ids": [
+        1618
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-015",
+      "type": "grounded",
+      "question": "Until which year did the Treasury say its spending plans were funded?",
+      "gold_answer": "2008",
+      "gold_article_ids": [
+        665
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-016",
+      "type": "grounded",
+      "question": "Who is chief executive of General Motors?",
+      "gold_answer": "rick waggoner",
+      "gold_article_ids": [
+        2196
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-017",
+      "type": "grounded",
+      "question": "On what date is General Motors due to reveal its 2004 earnings?",
+      "gold_answer": "19 january",
+      "gold_article_ids": [
+        2196
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-018",
+      "type": "grounded",
+      "question": "Which actor received two Golden Globe nominations?",
+      "gold_answer": "jamie foxx",
+      "gold_article_ids": [
+        2019
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-019",
+      "type": "grounded",
+      "question": "On what date will the Golden Globes ceremony take place?",
+      "gold_answer": "16 january",
+      "gold_article_ids": [
+        2019
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-020",
+      "type": "grounded",
+      "question": "On what date was We Are the World originally released in the US?",
+      "gold_answer": "7 march 1985",
+      "gold_article_ids": [
+        528
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-021",
+      "type": "grounded",
+      "question": "How old is singer Joss Stone?",
+      "gold_answer": "17",
+      "gold_article_ids": [
+        1575
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-022",
+      "type": "grounded",
+      "question": "Who discovered Joss Stone at an audition in New York?",
+      "gold_answer": "steve greenberg",
+      "gold_article_ids": [
+        1575
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-023",
+      "type": "grounded",
+      "question": "Which actor is replacing Dallas Roberts in The Glass Menagerie?",
+      "gold_answer": "christian slater",
+      "gold_article_ids": [
+        120
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-024",
+      "type": "grounded",
+      "question": "What opening date remains unchanged for The Glass Menagerie?",
+      "gold_answer": "15 march",
+      "gold_article_ids": [
+        120
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-025",
+      "type": "grounded",
+      "question": "Which Nicolas Cage film topped the US box office for a third week?",
+      "gold_answer": "national treasure",
+      "gold_article_ids": [
+        296
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-026",
+      "type": "grounded",
+      "question": "In which California city did Dan O'Herlihy die?",
+      "gold_answer": "malibu",
+      "gold_article_ids": [
+        2090
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-027",
+      "type": "grounded",
+      "question": "Who directed Howl's Moving Castle?",
+      "gold_answer": "hayao miyazaki",
+      "gold_article_ids": [
+        116
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-028",
+      "type": "grounded",
+      "question": "Who sang the theme to The Beverly Hillbillies?",
+      "gold_answer": "jerry scoggins",
+      "gold_article_ids": [
+        136
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-029",
+      "type": "grounded",
+      "question": "Who hinted that the general election would be announced on Monday?",
+      "gold_answer": "david blunkett",
+      "gold_article_ids": [
+        323
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-030",
+      "type": "grounded",
+      "question": "What date is tipped for the general election poll?",
+      "gold_answer": "5 may",
+      "gold_article_ids": [
+        323
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-031",
+      "type": "grounded",
+      "question": "Who said he would not take part in a televised election debate?",
+      "gold_answer": "tony blair",
+      "gold_article_ids": [
+        1538
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-032",
+      "type": "grounded",
+      "question": "Who leads the Veritas party?",
+      "gold_answer": "robert kilroy-silk",
+      "gold_article_ids": [
+        2221
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-033",
+      "type": "grounded",
+      "question": "Who predicted the Liberal Democrats' best ever election result?",
+      "gold_answer": "ed davey",
+      "gold_article_ids": [
+        197
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-034",
+      "type": "grounded",
+      "question": "How much did UKIP spend on its European election campaign?",
+      "gold_answer": "2.36m",
+      "gold_article_ids": [
+        260
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-035",
+      "type": "grounded",
+      "question": "Who is the Conservatives' campaign director?",
+      "gold_answer": "lynton crosby",
+      "gold_article_ids": [
+        2046
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-036",
+      "type": "grounded",
+      "question": "Who was appointed England's first children's commissioner?",
+      "gold_answer": "al aynsley-green",
+      "gold_article_ids": [
+        48
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-037",
+      "type": "grounded",
+      "question": "Which Labour MP said he would stand down at the next election?",
+      "gold_answer": "jack cunningham",
+      "gold_article_ids": [
+        121
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-038",
+      "type": "grounded",
+      "question": "Which club does Ole Gunnar Solskjaer play for?",
+      "gold_answer": "manchester united",
+      "gold_article_ids": [
+        91
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-039",
+      "type": "grounded",
+      "question": "Which England player is fit to face Edinburgh on Saturday?",
+      "gold_answer": "jonny wilkinson",
+      "gold_article_ids": [
+        8
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-040",
+      "type": "grounded",
+      "question": "Which firm notified iTunes users of the playlist security threat?",
+      "gold_answer": "idefence",
+      "gold_article_ids": [
+        2102
+      ],
+      "must_abstain": false
+    },
+    {
+      "id": "rag-041",
+      "type": "adversarial",
+      "question": "Who won the 2024 United States presidential election?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-042",
+      "type": "adversarial",
+      "question": "On what date did the World Health Organization declare COVID-19 a pandemic?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-043",
+      "type": "adversarial",
+      "question": "What is the retail price of the iPhone 16?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-044",
+      "type": "adversarial",
+      "question": "Which team won the 2022 FIFA World Cup?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-045",
+      "type": "adversarial",
+      "question": "Who is the prime minister of the United Kingdom in September 2026?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-046",
+      "type": "adversarial",
+      "question": "What did ChatGPT report about BBC News yesterday?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-047",
+      "type": "adversarial",
+      "question": "When was TikTok banned in the United States?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-048",
+      "type": "adversarial",
+      "question": "How many people died in the 2011 Tohoku earthquake?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-049",
+      "type": "adversarial",
+      "question": "Who won the Nobel Peace Prize in 2023?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    },
+    {
+      "id": "rag-050",
+      "type": "adversarial",
+      "question": "What was Bitcoin's closing price today?",
+      "gold_answer": "",
+      "gold_article_ids": [],
+      "must_abstain": true
+    }
+  ]
+}

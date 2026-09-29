@@ -1,0 +1,1266 @@
+{
+  "frozen": true,
+  "written_before_any_model_output": true,
+  "annotation_rules": {
+    "people": "Named persons only, using the fullest form written in the article. Omit titles alone and mr/ms plus surname when the full name is also present.",
+    "organisations": "Named companies, parties, clubs, broadcasters, hospitals, agencies, and bands. One entry per organisation. Omit product brands that are not organisations.",
+    "locations": "Named countries, cities, regions, and venues. Omit nationality adjectives.",
+    "dates": "Absolute dates only: a year, a day and month, or a month and year. Omit relative phrases such as last year, tuesday, and last month. If a year appears only inside a longer date, keep the longer date.",
+    "topic": "Three to eight English words describing the article.",
+    "match": "Compared after lowercasing, deleting every character that is not a letter, number, or space, and collapsing whitespace. A list field scores 1 only if the whole set matches."
+  },
+  "cases": [
+    {
+      "id": "ext-001",
+      "article_id": 261,
+      "category": "business",
+      "gold": {
+        "people": [
+          "finian o sullivan"
+        ],
+        "organisations": [
+          "burren energy",
+          "hindustan oil exploration"
+        ],
+        "locations": [
+          "egypt",
+          "gulf of suez",
+          "india",
+          "republic of congo",
+          "turkmenistan"
+        ],
+        "dates": [
+          "2003"
+        ],
+        "topic": "burren energy wins egyptian oil contracts"
+      }
+    },
+    {
+      "id": "ext-002",
+      "article_id": 34,
+      "category": "business",
+      "gold": {
+        "people": [
+          "eliot spitzer",
+          "joshua bewlay"
+        ],
+        "organisations": [
+          "american international group",
+          "marsh & mclennan"
+        ],
+        "locations": [
+          "new york",
+          "us"
+        ],
+        "dates": [],
+        "topic": "insurance executives plead guilty to fraud"
+      }
+    },
+    {
+      "id": "ext-003",
+      "article_id": 286,
+      "category": "business",
+      "gold": {
+        "people": [
+          "christian lacroix",
+          "simon falic"
+        ],
+        "organisations": [
+          "falic group",
+          "lvmh",
+          "reuters"
+        ],
+        "locations": [
+          "florida",
+          "paris",
+          "us"
+        ],
+        "dates": [
+          "2003"
+        ],
+        "topic": "us firm bids for christian lacroix"
+      }
+    },
+    {
+      "id": "ext-004",
+      "article_id": 725,
+      "category": "business",
+      "gold": {
+        "people": [
+          "b. satyanarayana"
+        ],
+        "organisations": [
+          "ford",
+          "hyundai",
+          "suzuki",
+          "toyota",
+          "volkswagen"
+        ],
+        "locations": [
+          "andhra pradesh",
+          "asia",
+          "india",
+          "visakhapatnam"
+        ],
+        "dates": [],
+        "topic": "volkswagen considers an indian car plant"
+      }
+    },
+    {
+      "id": "ext-005",
+      "article_id": 1884,
+      "category": "business",
+      "gold": {
+        "people": [
+          "prince alwaleed bin talal"
+        ],
+        "organisations": [
+          "berkeley",
+          "claridge s",
+          "connaught",
+          "fairmont hotels & resorts",
+          "four seasons",
+          "george v",
+          "hbos bank",
+          "quinlan private",
+          "savoy",
+          "simpson s in the strand"
+        ],
+        "locations": [
+          "london",
+          "paris",
+          "river thames"
+        ],
+        "dates": [
+          "summer 2006"
+        ],
+        "topic": "prince alwaleed group buys the savoy"
+      }
+    },
+    {
+      "id": "ext-006",
+      "article_id": 593,
+      "category": "business",
+      "gold": {
+        "people": [
+          "anil",
+          "dhirubhai ambani",
+          "mukesh ambani",
+          "nanik rupani"
+        ],
+        "organisations": [
+          "indian merchants chamber",
+          "reliance"
+        ],
+        "locations": [
+          "bombay",
+          "india"
+        ],
+        "dates": [
+          "2002"
+        ],
+        "topic": "reliance board agrees a share buy-back"
+      }
+    },
+    {
+      "id": "ext-007",
+      "article_id": 765,
+      "category": "business",
+      "gold": {
+        "people": [],
+        "organisations": [
+          "lufthansa"
+        ],
+        "locations": [
+          "iraq",
+          "us"
+        ],
+        "dates": [
+          "2003",
+          "2004",
+          "23 march"
+        ],
+        "topic": "lufthansa returns to profit in 2004"
+      }
+    },
+    {
+      "id": "ext-008",
+      "article_id": 1618,
+      "category": "business",
+      "gold": {
+        "people": [
+          "ivan menezes"
+        ],
+        "organisations": [
+          "chalone",
+          "diageo",
+          "london stock exchange"
+        ],
+        "locations": [
+          "california",
+          "london",
+          "us"
+        ],
+        "dates": [
+          "31 december 2003",
+          "first quarter of 2005",
+          "july"
+        ],
+        "topic": "diageo agrees to buy chalone"
+      }
+    },
+    {
+      "id": "ext-009",
+      "article_id": 665,
+      "category": "business",
+      "gold": {
+        "people": [
+          "gordon brown"
+        ],
+        "organisations": [
+          "ernst & young",
+          "national institute of economic and social research",
+          "treasury"
+        ],
+        "locations": [
+          "britain",
+          "japan",
+          "uk",
+          "us"
+        ],
+        "dates": [
+          "2004",
+          "2005",
+          "2006",
+          "2008",
+          "march 2006"
+        ],
+        "topic": "uk golden rule is at risk"
+      }
+    },
+    {
+      "id": "ext-010",
+      "article_id": 2196,
+      "category": "business",
+      "gold": {
+        "people": [
+          "rick waggoner"
+        ],
+        "organisations": [
+          "general motors",
+          "general motors acceptance corp"
+        ],
+        "locations": [
+          "africa",
+          "asia",
+          "europe",
+          "germany",
+          "latin america",
+          "middle east",
+          "north america",
+          "us"
+        ],
+        "dates": [
+          "19 january",
+          "2004",
+          "2005",
+          "2007"
+        ],
+        "topic": "general motors issues a 2005 profits warning"
+      }
+    },
+    {
+      "id": "ext-011",
+      "article_id": 2019,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "cate blanchett",
+          "charlize theron",
+          "clive owen",
+          "david carradine",
+          "jamie foxx",
+          "meryl streep",
+          "morgan freeman",
+          "natalie portman",
+          "renee zellweger",
+          "sean penn",
+          "tim robbins"
+        ],
+        "organisations": [],
+        "locations": [
+          "hollywood"
+        ],
+        "dates": [
+          "16 january",
+          "27 february"
+        ],
+        "topic": "jamie foxx receives two golden globe nominations"
+      }
+    },
+    {
+      "id": "ext-012",
+      "article_id": 528,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "bob dylan",
+          "bruce springsteen",
+          "diana ross",
+          "lionel richie",
+          "michael jackson",
+          "ray charles"
+        ],
+        "organisations": [
+          "usa for africa"
+        ],
+        "locations": [
+          "uk",
+          "us"
+        ],
+        "dates": [
+          "7 march 1985",
+          "january 1985"
+        ],
+        "topic": "we are the world is re-released"
+      }
+    },
+    {
+      "id": "ext-013",
+      "article_id": 1575,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "jocelyn stoker",
+          "joss stone",
+          "steve greenberg"
+        ],
+        "organisations": [
+          "bbc"
+        ],
+        "locations": [
+          "australia",
+          "cullumpton",
+          "devon",
+          "earls court",
+          "japan",
+          "london",
+          "new york",
+          "uk",
+          "us"
+        ],
+        "dates": [
+          "2005"
+        ],
+        "topic": "joss stone is nominated for brit awards"
+      }
+    },
+    {
+      "id": "ext-014",
+      "article_id": 120,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "christian slater",
+          "dallas roberts",
+          "david leveaux",
+          "jessica lange",
+          "joey collins",
+          "philip rinaldi",
+          "tennessee williams"
+        ],
+        "organisations": [],
+        "locations": [
+          "london",
+          "new york",
+          "west end"
+        ],
+        "dates": [
+          "15 march"
+        ],
+        "topic": "christian slater joins the glass menagerie"
+      }
+    },
+    {
+      "id": "ext-015",
+      "article_id": 296,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "ben gates",
+          "colin farrell",
+          "jamie lee curtis",
+          "jerry bruckheimer",
+          "jude law",
+          "nicolas cage",
+          "oliver stone",
+          "tim allen"
+        ],
+        "organisations": [
+          "disney"
+        ],
+        "locations": [
+          "canada",
+          "us"
+        ],
+        "dates": [],
+        "topic": "national treasure tops the us box office"
+      }
+    },
+    {
+      "id": "ext-016",
+      "article_id": 2090,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "andrew packard",
+          "dan o herlihy",
+          "luis bunuel",
+          "marlon brando",
+          "orson welles"
+        ],
+        "organisations": [],
+        "locations": [
+          "california",
+          "dublin",
+          "malibu"
+        ],
+        "dates": [
+          "1948",
+          "1955",
+          "1987",
+          "1990"
+        ],
+        "topic": "oscar nominee dan o herlihy dies"
+      }
+    },
+    {
+      "id": "ext-017",
+      "article_id": 116,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "diana wynne jones",
+          "hayao miyazaki"
+        ],
+        "organisations": [
+          "toho"
+        ],
+        "locations": [
+          "japan",
+          "venice"
+        ],
+        "dates": [],
+        "topic": "howl s moving castle sets a japanese record"
+      }
+    },
+    {
+      "id": "ext-018",
+      "article_id": 136,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "earl scruggs",
+          "jane kelly misel",
+          "jerry scoggins",
+          "lester flatt"
+        ],
+        "organisations": [],
+        "locations": [
+          "beverly hills",
+          "los angeles"
+        ],
+        "dates": [
+          "1962",
+          "1971",
+          "1993"
+        ],
+        "topic": "beverly hillbillies singer jerry scoggins dies"
+      }
+    },
+    {
+      "id": "ext-019",
+      "article_id": 100,
+      "category": "entertainment",
+      "gold": {
+        "people": [],
+        "organisations": [
+          "bbc",
+          "channel 4",
+          "itv"
+        ],
+        "locations": [],
+        "dates": [
+          "2002",
+          "2004",
+          "january",
+          "january 2005",
+          "july"
+        ],
+        "topic": "desperate housewives lifts channel 4 ratings"
+      }
+    },
+    {
+      "id": "ext-020",
+      "article_id": 163,
+      "category": "entertainment",
+      "gold": {
+        "people": [
+          "frank capra",
+          "james stewart",
+          "jon thoday",
+          "philip van doren stern",
+          "steve brown"
+        ],
+        "organisations": [
+          "paramount"
+        ],
+        "locations": [
+          "london"
+        ],
+        "dates": [
+          "1946",
+          "1999"
+        ],
+        "topic": "it s a wonderful life becomes a musical"
+      }
+    },
+    {
+      "id": "ext-021",
+      "article_id": 323,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "david blunkett",
+          "tony blair"
+        ],
+        "organisations": [
+          "bbc"
+        ],
+        "locations": [
+          "sheffield"
+        ],
+        "dates": [
+          "5 may"
+        ],
+        "topic": "blunkett hints at a monday election call"
+      }
+    },
+    {
+      "id": "ext-022",
+      "article_id": 1538,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "charles kennedy",
+          "john major",
+          "michael howard",
+          "tony blair",
+          "william hague"
+        ],
+        "organisations": [],
+        "locations": [
+          "us"
+        ],
+        "dates": [
+          "1997",
+          "2001"
+        ],
+        "topic": "blair refuses a televised election debate"
+      }
+    },
+    {
+      "id": "ext-023",
+      "article_id": 2221,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "robert kilroy-silk"
+        ],
+        "organisations": [
+          "veritas"
+        ],
+        "locations": [
+          "britain",
+          "poland",
+          "uk"
+        ],
+        "dates": [],
+        "topic": "kilroy-silk unveils a veritas immigration policy"
+      }
+    },
+    {
+      "id": "ext-024",
+      "article_id": 197,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "charles kennedy",
+          "ed davey"
+        ],
+        "organisations": [
+          "labour",
+          "lib dems",
+          "tories"
+        ],
+        "locations": [],
+        "dates": [
+          "5 may"
+        ],
+        "topic": "lib dems predict their best ever poll"
+      }
+    },
+    {
+      "id": "ext-025",
+      "article_id": 260,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "paul sykes"
+        ],
+        "organisations": [
+          "conservatives",
+          "electoral commission",
+          "greens",
+          "labour",
+          "liberal democrats",
+          "uk independence party"
+        ],
+        "locations": [
+          "europe",
+          "yorkshire"
+        ],
+        "dates": [],
+        "topic": "ukip outspent labour in the european elections"
+      }
+    },
+    {
+      "id": "ext-026",
+      "article_id": 2046,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "john howard",
+          "lynton crosby",
+          "michael howard"
+        ],
+        "organisations": [
+          "conservatives",
+          "labour",
+          "the times"
+        ],
+        "locations": [
+          "australia"
+        ],
+        "dates": [],
+        "topic": "lynton crosby denies a tory defeat warning"
+      }
+    },
+    {
+      "id": "ext-027",
+      "article_id": 310,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "alastair campbell",
+          "michael martin"
+        ],
+        "organisations": [],
+        "locations": [],
+        "dates": [],
+        "topic": "speaker bans blackberries in the commons"
+      }
+    },
+    {
+      "id": "ext-028",
+      "article_id": 48,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "al aynsley-green",
+          "ruth kelly"
+        ],
+        "organisations": [
+          "department of health",
+          "great ormond street hospital",
+          "guy s hospital",
+          "oriel college",
+          "oxford university",
+          "university of london"
+        ],
+        "locations": [
+          "england",
+          "northern ireland",
+          "oxford",
+          "scotland",
+          "switzerland",
+          "wales"
+        ],
+        "dates": [],
+        "topic": "england appoints its first children s commissioner"
+      }
+    },
+    {
+      "id": "ext-029",
+      "article_id": 55,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "ed davey"
+        ],
+        "organisations": [
+          "liberal democrats",
+          "tories"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "lib dems offer insulation vouchers to pensioners"
+      }
+    },
+    {
+      "id": "ext-030",
+      "article_id": 121,
+      "category": "politics",
+      "gold": {
+        "people": [
+          "jack cunningham",
+          "jim callaghan",
+          "tony blair"
+        ],
+        "organisations": [
+          "labour"
+        ],
+        "locations": [
+          "copeland"
+        ],
+        "dates": [
+          "1970",
+          "1997",
+          "1999"
+        ],
+        "topic": "jack cunningham to stand down at the election"
+      }
+    },
+    {
+      "id": "ext-031",
+      "article_id": 2110,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "anglesea",
+          "bozzi",
+          "brown",
+          "c jones",
+          "caillet",
+          "carter",
+          "chabal",
+          "chris rhys jones",
+          "cole",
+          "coutts",
+          "daly",
+          "day",
+          "delport",
+          "duffy",
+          "fortey",
+          "gillies",
+          "hanley",
+          "hayes",
+          "hercus",
+          "hickey",
+          "horsman",
+          "john payne",
+          "lombard",
+          "lund",
+          "macleod-henderson",
+          "martens",
+          "mayor",
+          "o leary",
+          "phil murphy",
+          "pieters",
+          "powell",
+          "rasmussen",
+          "redpath",
+          "richard wigglesworth",
+          "riley",
+          "roddam",
+          "sanderson",
+          "schofield",
+          "stewart",
+          "tim collier",
+          "trueman",
+          "turner",
+          "vaili",
+          "van niekerk",
+          "windo"
+        ],
+        "organisations": [
+          "sale",
+          "worcester"
+        ],
+        "locations": [
+          "sixways"
+        ],
+        "dates": [
+          "25 february 2000"
+        ],
+        "topic": "worcester name a team to face sale"
+      }
+    },
+    {
+      "id": "ext-032",
+      "article_id": 1883,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "andy reid",
+          "brett ormerod",
+          "darren kenton",
+          "mark arthur",
+          "michael dawson"
+        ],
+        "organisations": [
+          "nottingham forest",
+          "southampton",
+          "tottenham"
+        ],
+        "locations": [
+          "republic of ireland"
+        ],
+        "dates": [],
+        "topic": "tottenham bid eight million for forest duo"
+      }
+    },
+    {
+      "id": "ext-033",
+      "article_id": 1319,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "adriano rigoglioso",
+          "beardsley",
+          "brown",
+          "coppinger",
+          "danny williams",
+          "fenton",
+          "green",
+          "hyde",
+          "ingham",
+          "jackson",
+          "james",
+          "maloney",
+          "mawson",
+          "michael mcindoe",
+          "mills",
+          "mkandawire",
+          "morley",
+          "mulligan",
+          "pitman",
+          "price",
+          "priet",
+          "purdie",
+          "ravenhill",
+          "robinson",
+          "ryan",
+          "scott",
+          "smith",
+          "stanley",
+          "stansfield",
+          "t parkes",
+          "tierney",
+          "travis",
+          "warrington"
+        ],
+        "organisations": [
+          "doncaster",
+          "hereford"
+        ],
+        "locations": [
+          "w midlands"
+        ],
+        "dates": [],
+        "topic": "hereford draw with doncaster and win on penalties"
+      }
+    },
+    {
+      "id": "ext-034",
+      "article_id": 91,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "ole gunnar solskjaer"
+        ],
+        "organisations": [
+          "aftenposten",
+          "manchester united",
+          "millwall"
+        ],
+        "locations": [
+          "norway",
+          "sweden"
+        ],
+        "dates": [
+          "2006",
+          "august",
+          "may"
+        ],
+        "topic": "solskjaer hopes to return next season"
+      }
+    },
+    {
+      "id": "ext-035",
+      "article_id": 634,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "adrian mutu",
+          "alessandro moggi",
+          "luciano moggi"
+        ],
+        "organisations": [
+          "chelsea",
+          "dinamo bucharest",
+          "english fa",
+          "fiorentina",
+          "juventus"
+        ],
+        "locations": [
+          "romania"
+        ],
+        "dates": [
+          "may"
+        ],
+        "topic": "adrian mutu to hold talks with juventus"
+      }
+    },
+    {
+      "id": "ext-036",
+      "article_id": 1826,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "gary murray",
+          "glynn tromans",
+          "hayley yelling",
+          "jolene byrne",
+          "louise damen",
+          "peter riley"
+        ],
+        "organisations": [
+          "england",
+          "great britain",
+          "ireland",
+          "reebok"
+        ],
+        "locations": [
+          "bute park",
+          "cardiff"
+        ],
+        "dates": [],
+        "topic": "hayley yelling wins the cardiff cross challenge"
+      }
+    },
+    {
+      "id": "ext-037",
+      "article_id": 297,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "budge pountney",
+          "jeff probyn",
+          "nigel gillingham",
+          "robert horner",
+          "steve lander"
+        ],
+        "organisations": [
+          "northampton",
+          "rugby football union",
+          "saracens"
+        ],
+        "locations": [
+          "london",
+          "scotland"
+        ],
+        "dates": [
+          "5 february"
+        ],
+        "topic": "budge pountney is banned and fined"
+      }
+    },
+    {
+      "id": "ext-038",
+      "article_id": 95,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "jaslyn",
+          "joachim johansson",
+          "juan ignacio chela",
+          "lleyton hewitt",
+          "olivier rochus",
+          "taylor dent"
+        ],
+        "organisations": [],
+        "locations": [
+          "adelaide",
+          "belgium"
+        ],
+        "dates": [],
+        "topic": "taylor dent reaches the adelaide final"
+      }
+    },
+    {
+      "id": "ext-039",
+      "article_id": 7,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "ivan ljubicic",
+          "nicolas kiefer",
+          "tim henman",
+          "tommy robredo"
+        ],
+        "organisations": [],
+        "locations": [
+          "dubai",
+          "germany"
+        ],
+        "dates": [],
+        "topic": "tim henman loses his dubai quarter-final"
+      }
+    },
+    {
+      "id": "ext-040",
+      "article_id": 8,
+      "category": "sport",
+      "gold": {
+        "people": [
+          "charlie hodgson",
+          "jason robinson",
+          "jonny wilkinson",
+          "rob andrew"
+        ],
+        "organisations": [
+          "newcastle falcons",
+          "sale"
+        ],
+        "locations": [
+          "australia",
+          "canada",
+          "edinburgh",
+          "england",
+          "murrayfield",
+          "south africa"
+        ],
+        "dates": [
+          "17 october"
+        ],
+        "topic": "jonny wilkinson is fit to face edinburgh"
+      }
+    },
+    {
+      "id": "ext-041",
+      "article_id": 2102,
+      "category": "tech",
+      "gold": {
+        "people": [],
+        "organisations": [
+          "apple",
+          "idefence"
+        ],
+        "locations": [],
+        "dates": [
+          "2003"
+        ],
+        "topic": "apple warns itunes users of hackers"
+      }
+    },
+    {
+      "id": "ext-042",
+      "article_id": 36,
+      "category": "tech",
+      "gold": {
+        "people": [],
+        "organisations": [
+          "nintendo",
+          "sony"
+        ],
+        "locations": [
+          "europe",
+          "japan",
+          "north america",
+          "us"
+        ],
+        "dates": [
+          "march 2005"
+        ],
+        "topic": "gamers buy the first sony psp consoles"
+      }
+    },
+    {
+      "id": "ext-043",
+      "article_id": 1605,
+      "category": "tech",
+      "gold": {
+        "people": [
+          "kaz hirai"
+        ],
+        "organisations": [
+          "nintendo",
+          "sony",
+          "sony computer entertainment america"
+        ],
+        "locations": [
+          "europe",
+          "japan",
+          "us"
+        ],
+        "dates": [
+          "11 march",
+          "24 march"
+        ],
+        "topic": "sony psp launches in the us"
+      }
+    },
+    {
+      "id": "ext-044",
+      "article_id": 1159,
+      "category": "tech",
+      "gold": {
+        "people": [
+          "stephen toulouse"
+        ],
+        "organisations": [
+          "microsoft",
+          "sybari software"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "microsoft investigates a spyware trojan"
+      }
+    },
+    {
+      "id": "ext-045",
+      "article_id": 20,
+      "category": "tech",
+      "gold": {
+        "people": [],
+        "organisations": [
+          "fbi"
+        ],
+        "locations": [
+          "us"
+        ],
+        "dates": [],
+        "topic": "fbi warns of a virus sent by email"
+      }
+    },
+    {
+      "id": "ext-046",
+      "article_id": 473,
+      "category": "tech",
+      "gold": {
+        "people": [
+          "george w bush"
+        ],
+        "organisations": [
+          "federal communications commission"
+        ],
+        "locations": [
+          "uk",
+          "us"
+        ],
+        "dates": [
+          "2007",
+          "june 2003",
+          "june 2004"
+        ],
+        "topic": "us broadband connections rise sharply"
+      }
+    },
+    {
+      "id": "ext-047",
+      "article_id": 1828,
+      "category": "tech",
+      "gold": {
+        "people": [],
+        "organisations": [
+          "icann",
+          "microsoft",
+          "nokia",
+          "t-mobile"
+        ],
+        "locations": [
+          "britain",
+          "france"
+        ],
+        "dates": [],
+        "topic": "icann gives preliminary approval to new domains"
+      }
+    },
+    {
+      "id": "ext-048",
+      "article_id": 27,
+      "category": "tech",
+      "gold": {
+        "people": [
+          "belinda henderson"
+        ],
+        "organisations": [
+          "rooster"
+        ],
+        "locations": [
+          "london",
+          "uk"
+        ],
+        "dates": [
+          "2005"
+        ],
+        "topic": "a rock gig is broadcast to 3g phones"
+      }
+    },
+    {
+      "id": "ext-049",
+      "article_id": 44,
+      "category": "tech",
+      "gold": {
+        "people": [
+          "gerry ellis",
+          "zhang hemin"
+        ],
+        "organisations": [
+          "globio",
+          "intel",
+          "wolong nature reserve"
+        ],
+        "locations": [
+          "china",
+          "oregon",
+          "portland",
+          "sichuan",
+          "us"
+        ],
+        "dates": [],
+        "topic": "wireless network helps panda researchers"
+      }
+    },
+    {
+      "id": "ext-050",
+      "article_id": 68,
+      "category": "tech",
+      "gold": {
+        "people": [
+          "blake irving"
+        ],
+        "organisations": [
+          "aol",
+          "google",
+          "microsoft",
+          "technorati"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "microsoft tests a blogging service called msn spaces"
+      }
+    }
+  ]
+}
