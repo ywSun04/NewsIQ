@@ -3,6 +3,7 @@
 import csv
 import json
 import re
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -117,12 +118,73 @@ def as_set(values):
     return {normalise(item) for item in values if normalise(item)}
 
 
+LIST_FIELDS = ["people", "organisations", "locations", "dates"]
+
+
 def score_fields(gold, predicted):
     scores = {}
-    for field in ("people", "organisations", "locations", "dates"):
+    for field in LIST_FIELDS:
         scores[field] = int(as_set(predicted.get(field, [])) == as_set(gold[field]))
     scores["topic"] = int(normalise(predicted.get("topic", "")) == normalise(gold["topic"]))
     return scores
+
+
+def overlap_counts(gold, predicted):
+    predicted = predicted or {}
+    counts = {}
+    for field in LIST_FIELDS:
+        gold_set = as_set(gold[field])
+        pred_set = as_set(predicted.get(field) or [])
+        counts[field] = {
+            "tp": len(gold_set & pred_set),
+            "fp": len(pred_set - gold_set),
+            "fn": len(gold_set - pred_set),
+        }
+    return counts
+
+
+def f1_from(tp, fp, fn):
+    precision = tp / (tp + fp) if tp + fp else 0.0
+    recall = tp / (tp + fn) if tp + fn else 0.0
+    score = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+    return precision, recall, score
+
+
+def entity_f1(rows):
+    totals = {field: {"tp": 0, "fp": 0, "fn": 0} for field in LIST_FIELDS}
+    for row in rows:
+        counts = row.get("overlap")
+        if not counts:
+            continue
+        for field in LIST_FIELDS:
+            for key in ("tp", "fp", "fn"):
+                totals[field][key] += counts[field][key]
+    per_field = {}
+    tp = fp = fn = 0
+    for field in LIST_FIELDS:
+        precision, recall, score = f1_from(**totals[field])
+        per_field[field] = {
+            "precision": round(precision, 4),
+            "recall": round(recall, 4),
+            "f1": round(score, 4),
+        }
+        tp += totals[field]["tp"]
+        fp += totals[field]["fp"]
+        fn += totals[field]["fn"]
+    precision, recall, score = f1_from(tp, fp, fn)
+    return {
+        "entity_micro_precision": round(precision, 4),
+        "entity_micro_recall": round(recall, 4),
+        "entity_micro_f1": round(score, 4),
+        "entity_f1_by_field": per_field,
+        "scoring_note": (
+            "field_correctness_exact keeps the pre-registered rule: a list field "
+            "scores 1 only when the whole set matches, and topic must match the "
+            "fixed phrase. entity_micro_f1 scores people, organisations, locations, "
+            "and dates by overlap. Topic is left out of that F1 because a paraphrase "
+            "of the same event scores zero under exact match."
+        ),
+    }
 
 
 def summarise(rows):
@@ -147,8 +209,11 @@ def summarise(rows):
         "session_max_usd": SESSION_MAX_USD,
         "n": len(rows),
         "l1_pass_rate": round(sum(row["l1_pass"] for row in rows) / len(rows), 4) if rows else 0,
+        "field_correctness_exact": round(mean_case, 4),
         "field_correctness": round(mean_case, 4),
+        "per_field_exact": per_field,
         "per_field": per_field,
+        **entity_f1(rows),
         "calls": len(calls),
         "prompt_tokens": sum(row.get("prompt_tokens", 0) for row in rows),
         "completion_tokens": sum(row.get("completion_tokens", 0) for row in rows),
@@ -201,6 +266,7 @@ def main():
             "l1_pass": passed,
             "l1_errors": errors,
             "field_scores": scores,
+            "overlap": overlap_counts(case["gold"], predicted if isinstance(predicted, dict) else {}),
             "case_score": sum(scores.values()) / len(FIELDS),
             "predicted": predicted,
             "prompt_tokens": prompt_tokens,
@@ -236,5 +302,27 @@ def main():
     )}, indent=2))
 
 
+def rescore_saved():
+    destination = ROOT / "results" / "extraction.json"
+    saved = json.loads(destination.read_text(encoding="utf-8"))
+    gold = json.loads((ROOT / "eval" / "extraction_50.json").read_text(encoding="utf-8"))
+    gold_by_id = {case["id"]: case["gold"] for case in gold["cases"]}
+    for row in saved["cases"]:
+        row["overlap"] = overlap_counts(gold_by_id[row["id"]], row.get("predicted"))
+    fresh = summarise(saved["cases"])
+    destination.write_text(json.dumps(fresh, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({
+        "field_correctness_exact": fresh["field_correctness_exact"],
+        "entity_micro_f1": fresh["entity_micro_f1"],
+        "entity_micro_precision": fresh["entity_micro_precision"],
+        "entity_micro_recall": fresh["entity_micro_recall"],
+        "entity_f1_by_field": fresh["entity_f1_by_field"],
+        "per_field_exact": fresh["per_field_exact"],
+    }, indent=2))
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "rescore":
+        rescore_saved()
+    else:
+        main()
