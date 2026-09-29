@@ -1,0 +1,163 @@
+{
+  "method": "hand keyword counts",
+  "split": "test",
+  "n": 100,
+  "weighted_f1_abstention_counts_as_miss": 0.9125,
+  "weighted_f1_on_accepted_only": 0.9353,
+  "abstention_rate": 0.04,
+  "abstained": 4,
+  "per_label": {
+    "business": {
+      "support": 23,
+      "precision": 0.913,
+      "recall": 0.913,
+      "f1": 0.913
+    },
+    "entertainment": {
+      "support": 17,
+      "precision": 0.9412,
+      "recall": 0.9412,
+      "f1": 0.9412
+    },
+    "politics": {
+      "support": 19,
+      "precision": 0.9048,
+      "recall": 1.0,
+      "f1": 0.95
+    },
+    "sport": {
+      "support": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "tech": {
+      "support": 18,
+      "precision": 0.9167,
+      "recall": 0.6111,
+      "f1": 0.7333
+    }
+  },
+  "errors": [
+    {
+      "article_id": 19,
+      "truth": "tech",
+      "prediction": "business",
+      "scores": {
+        "business": 5,
+        "entertainment": 0,
+        "politics": 0,
+        "sport": 0,
+        "tech": 4
+      }
+    },
+    {
+      "article_id": 137,
+      "truth": "tech",
+      "prediction": null,
+      "scores": {
+        "business": 0,
+        "entertainment": 0,
+        "politics": 0,
+        "sport": 0,
+        "tech": 0
+      }
+    },
+    {
+      "article_id": 599,
+      "truth": "tech",
+      "prediction": "politics",
+      "scores": {
+        "business": 2,
+        "entertainment": 0,
+        "politics": 8,
+        "sport": 0,
+        "tech": 4
+      }
+    },
+    {
+      "article_id": 1011,
+      "truth": "business",
+      "prediction": "tech",
+      "scores": {
+        "business": 0,
+        "entertainment": 0,
+        "politics": 0,
+        "sport": 0,
+        "tech": 13
+      }
+    },
+    {
+      "article_id": 1410,
+      "truth": "entertainment",
+      "prediction": null,
+      "scores": {
+        "business": 3,
+        "entertainment": 9,
+        "politics": 2,
+        "sport": 0,
+        "tech": 9
+      }
+    },
+    {
+      "article_id": 1731,
+      "truth": "business",
+      "prediction": "politics",
+      "scores": {
+        "business": 1,
+        "entertainment": 0,
+        "politics": 4,
+        "sport": 0,
+        "tech": 0
+      }
+    },
+    {
+      "article_id": 1755,
+      "truth": "tech",
+      "prediction": null,
+      "scores": {
+        "business": 0,
+        "entertainment": 0,
+        "politics": 0,
+        "sport": 0,
+        "tech": 0
+      }
+    },
+    {
+      "article_id": 1926,
+      "truth": "tech",
+      "prediction": "entertainment",
+      "scores": {
+        "business": 0,
+        "entertainment": 13,
+        "politics": 0,
+        "sport": 0,
+        "tech": 9
+      }
+    },
+    {
+      "article_id": 2023,
+      "truth": "tech",
+      "prediction": "business",
+      "scores": {
+        "business": 3,
+        "entertainment": 0,
+        "politics": 2,
+        "sport": 1,
+        "tech": 1
+      }
+    },
+    {
+      "article_id": 2167,
+      "truth": "tech",
+      "prediction": null,
+      "scores": {
+        "business": 3,
+        "entertainment": 0,
+        "politics": 6,
+        "sport": 0,
+        "tech": 6
+      }
+    }
+  ]
+}
