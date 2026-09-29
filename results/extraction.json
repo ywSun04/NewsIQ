@@ -1,0 +1,1937 @@
+{
+  "generator": "openai/gpt-4o-mini",
+  "temperature": 0,
+  "max_tokens": 500,
+  "price_card_usd_per_million": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "session_max_calls": 30,
+  "session_max_usd": 0.05,
+  "n": 50,
+  "l1_pass_rate": 1.0,
+  "field_correctness": 0.484,
+  "per_field": {
+    "people": 0.84,
+    "organisations": 0.52,
+    "locations": 0.48,
+    "dates": 0.52,
+    "topic": 0.06
+  },
+  "calls": 50,
+  "prompt_tokens": 22498,
+  "completion_tokens": 4643,
+  "usd": 0.006157,
+  "mean_usd_per_extraction": 0.000123,
+  "full_corpus_usd": 0.274,
+  "cases": [
+    {
+      "id": "ext-001",
+      "article_id": 261,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "Finian O'Sullivan"
+        ],
+        "organisations": [
+          "Burren Energy",
+          "Hindustan Oil Exploration"
+        ],
+        "locations": [
+          "Egypt",
+          "Gulf of Suez",
+          "Turkmenistan",
+          "Republic of Congo"
+        ],
+        "dates": [
+          "2003",
+          "last year"
+        ],
+        "topic": "Burren Energy awarded contracts in Egypt"
+      },
+      "prompt_tokens": 399,
+      "completion_tokens": 102,
+      "usd": 0.000121
+    },
+    {
+      "id": "ext-002",
+      "article_id": 34,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 0,
+        "topic": 1
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "eliot spitzer",
+          "joshua bewlay"
+        ],
+        "organisations": [
+          "american international group",
+          "marsh & mclennan"
+        ],
+        "locations": [
+          "new york"
+        ],
+        "dates": [
+          "tuesday",
+          "last month"
+        ],
+        "topic": "insurance executives plead guilty to fraud"
+      },
+      "prompt_tokens": 397,
+      "completion_tokens": 88,
+      "usd": 0.000112
+    },
+    {
+      "id": "ext-003",
+      "article_id": 286,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Christian Lacroix",
+          "Simon Falic"
+        ],
+        "organisations": [
+          "LVMH",
+          "Falic Group",
+          "Reuters"
+        ],
+        "locations": [
+          "Paris",
+          "Florida",
+          "US"
+        ],
+        "dates": [
+          "early 2003"
+        ],
+        "topic": "US firm bids for Lacroix label"
+      },
+      "prompt_tokens": 412,
+      "completion_tokens": 93,
+      "usd": 0.000118
+    },
+    {
+      "id": "ext-004",
+      "article_id": 725,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "B. Satyanarayana"
+        ],
+        "organisations": [
+          "Volkswagen",
+          "Hyundai",
+          "Toyota",
+          "Suzuki",
+          "Ford"
+        ],
+        "locations": [
+          "India",
+          "Andhra Pradesh",
+          "Visakhapatnam"
+        ],
+        "dates": [],
+        "topic": "Volkswagen considers opening Indian plant"
+      },
+      "prompt_tokens": 402,
+      "completion_tokens": 90,
+      "usd": 0.000114
+    },
+    {
+      "id": "ext-005",
+      "article_id": 1884,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "prince alwaleed bin talal"
+        ],
+        "organisations": [
+          "hbos bank",
+          "quinlan private",
+          "fairmont hotels & resorts"
+        ],
+        "locations": [
+          "london",
+          "paris",
+          "river thames"
+        ],
+        "dates": [
+          "last year",
+          "summer 2006"
+        ],
+        "topic": "saudi investor buys the savoy hotel"
+      },
+      "prompt_tokens": 414,
+      "completion_tokens": 104,
+      "usd": 0.000124
+    },
+    {
+      "id": "ext-006",
+      "article_id": 593,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Mukesh Ambani",
+          "Anil",
+          "Dhirubhai Ambani",
+          "Nanik Rupani"
+        ],
+        "organisations": [
+          "Reliance",
+          "Indian Merchants Chamber"
+        ],
+        "locations": [
+          "India",
+          "Bombay"
+        ],
+        "dates": [
+          "2002",
+          "last month"
+        ],
+        "topic": "share buy-back amid family feud"
+      },
+      "prompt_tokens": 427,
+      "completion_tokens": 102,
+      "usd": 0.000125
+    },
+    {
+      "id": "ext-007",
+      "article_id": 765,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 1
+      },
+      "case_score": 0.8,
+      "predicted": {
+        "people": [],
+        "organisations": [
+          "lufthansa"
+        ],
+        "locations": [],
+        "dates": [
+          "2004",
+          "2003",
+          "23 march"
+        ],
+        "topic": "lufthansa returns to profit in 2004"
+      },
+      "prompt_tokens": 428,
+      "completion_tokens": 62,
+      "usd": 0.000101
+    },
+    {
+      "id": "ext-008",
+      "article_id": 1618,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Ivan Menezes"
+        ],
+        "organisations": [
+          "Diageo",
+          "Chalone"
+        ],
+        "locations": [
+          "California",
+          "United States"
+        ],
+        "dates": [
+          "2005",
+          "31 December 2003"
+        ],
+        "topic": "Diageo acquisition of Chalone wine company"
+      },
+      "prompt_tokens": 443,
+      "completion_tokens": 85,
+      "usd": 0.000117
+    },
+    {
+      "id": "ext-009",
+      "article_id": 665,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Gordon Brown"
+        ],
+        "organisations": [
+          "National Institute of Economic and Social Research",
+          "Ernst & Young",
+          "Treasury"
+        ],
+        "locations": [
+          "UK",
+          "US",
+          "Japan",
+          "Euro zone"
+        ],
+        "dates": [
+          "2008",
+          "March 2006",
+          "2005",
+          "2004",
+          "2006"
+        ],
+        "topic": "UK government fiscal policy and economic forecasts"
+      },
+      "prompt_tokens": 791,
+      "completion_tokens": 116,
+      "usd": 0.000188
+    },
+    {
+      "id": "ext-010",
+      "article_id": 2196,
+      "category": "business",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Rick Waggoner"
+        ],
+        "organisations": [
+          "General Motors",
+          "General Motors Acceptance Corp"
+        ],
+        "locations": [
+          "Europe",
+          "United States",
+          "Germany",
+          "Asia Pacific",
+          "Latin America",
+          "Middle East",
+          "Africa"
+        ],
+        "dates": [
+          "2004",
+          "19 January",
+          "2005",
+          "2007"
+        ],
+        "topic": "General Motors profits warning"
+      },
+      "prompt_tokens": 615,
+      "completion_tokens": 112,
+      "usd": 0.000159
+    },
+    {
+      "id": "ext-011",
+      "article_id": 2019,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Jamie Foxx",
+          "Meryl Streep",
+          "Morgan Freeman",
+          "Cate Blanchett",
+          "Clive Owen",
+          "David Carradine",
+          "Natalie Portman",
+          "Sean Penn",
+          "Charlize Theron",
+          "Tim Robbins",
+          "Renee Zellweger"
+        ],
+        "organisations": [
+          "Golden Globe Awards"
+        ],
+        "locations": [
+          "Hollywood"
+        ],
+        "dates": [
+          "16 January",
+          "27 February"
+        ],
+        "topic": "Jamie Foxx Golden Globe nominations"
+      },
+      "prompt_tokens": 413,
+      "completion_tokens": 131,
+      "usd": 0.000141
+    },
+    {
+      "id": "ext-012",
+      "article_id": 528,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Lionel Richie",
+          "Diana Ross",
+          "Ray Charles",
+          "Bob Dylan",
+          "Michael Jackson",
+          "Bruce Springsteen"
+        ],
+        "organisations": [
+          "USA for Africa"
+        ],
+        "locations": [
+          "US",
+          "UK"
+        ],
+        "dates": [
+          "7 March 1985",
+          "January 1985",
+          "20th anniversary"
+        ],
+        "topic": "Re-release of We Are the World"
+      },
+      "prompt_tokens": 407,
+      "completion_tokens": 112,
+      "usd": 0.000128
+    },
+    {
+      "id": "ext-013",
+      "article_id": 1575,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "Joss Stone",
+          "Jocelyn Stoker",
+          "Steve Greenberg"
+        ],
+        "organisations": [
+          "BBC"
+        ],
+        "locations": [
+          "East Devon",
+          "Cullumpton",
+          "London",
+          "New York",
+          "Japan",
+          "Australia",
+          "US"
+        ],
+        "dates": [
+          "Wednesday",
+          "October",
+          "2005"
+        ],
+        "topic": "Joss Stone nominated for Brit Awards"
+      },
+      "prompt_tokens": 411,
+      "completion_tokens": 113,
+      "usd": 0.000129
+    },
+    {
+      "id": "ext-014",
+      "article_id": 120,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "Christian Slater",
+          "Dallas Roberts",
+          "Joey Collins",
+          "Philip Rinaldi",
+          "Jessica Lange",
+          "David Leveaux"
+        ],
+        "organisations": [],
+        "locations": [
+          "New York",
+          "Ethel Barrymore Theatre"
+        ],
+        "dates": [
+          "15 March"
+        ],
+        "topic": "Christian Slater stars in Broadway play"
+      },
+      "prompt_tokens": 436,
+      "completion_tokens": 96,
+      "usd": 0.000123
+    },
+    {
+      "id": "ext-015",
+      "article_id": 296,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Nicolas Cage",
+          "Tim Allen",
+          "Jamie Lee Curtis",
+          "Jude Law",
+          "Colin Farrell",
+          "Oliver Stone",
+          "Jerry Bruckheimer"
+        ],
+        "organisations": [
+          "Disney"
+        ],
+        "locations": [
+          "US",
+          "Canada"
+        ],
+        "dates": [],
+        "topic": "National Treasure tops US box office"
+      },
+      "prompt_tokens": 450,
+      "completion_tokens": 94,
+      "usd": 0.000124
+    },
+    {
+      "id": "ext-016",
+      "article_id": 2090,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 0,
+        "topic": 1
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "dan o herlihy",
+          "luis bunuel",
+          "orson welles",
+          "marlon brando"
+        ],
+        "organisations": [
+          "omni consumer products"
+        ],
+        "locations": [
+          "malibu",
+          "california"
+        ],
+        "dates": [
+          "1955",
+          "1987",
+          "1990"
+        ],
+        "topic": "oscar nominee dan o herlihy dies"
+      },
+      "prompt_tokens": 446,
+      "completion_tokens": 108,
+      "usd": 0.000132
+    },
+    {
+      "id": "ext-017",
+      "article_id": 116,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "hayao miyazaki",
+          "diana wynne jones"
+        ],
+        "organisations": [
+          "toho",
+          "screen daily"
+        ],
+        "locations": [
+          "japan",
+          "venice"
+        ],
+        "dates": [
+          "last year",
+          "this year"
+        ],
+        "topic": "animation charms japan box office"
+      },
+      "prompt_tokens": 432,
+      "completion_tokens": 89,
+      "usd": 0.000118
+    },
+    {
+      "id": "ext-018",
+      "article_id": 136,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "jerry scoggins",
+          "jane kelly misel",
+          "lester flatt",
+          "earl scruggs"
+        ],
+        "organisations": [
+          "the beverly hillbillies"
+        ],
+        "locations": [
+          "los angeles"
+        ],
+        "dates": [
+          "1962",
+          "1971",
+          "1993"
+        ],
+        "topic": "death of country musician jerry scoggins"
+      },
+      "prompt_tokens": 450,
+      "completion_tokens": 108,
+      "usd": 0.000132
+    },
+    {
+      "id": "ext-019",
+      "article_id": 100,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [],
+        "organisations": [
+          "Channel 4",
+          "BBC",
+          "ITV1",
+          "BBC Two",
+          "Five"
+        ],
+        "locations": [],
+        "dates": [
+          "january 2004",
+          "january 2005"
+        ],
+        "topic": "Channel 4 ratings and television audience share"
+      },
+      "prompt_tokens": 475,
+      "completion_tokens": 82,
+      "usd": 0.00012
+    },
+    {
+      "id": "ext-020",
+      "article_id": 163,
+      "category": "entertainment",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Frank Capra",
+          "James Stewart",
+          "Jon Thoday",
+          "Steve Brown",
+          "Philip Van Doren Stern"
+        ],
+        "organisations": [
+          "Jerry Springer - The Opera",
+          "Paramount"
+        ],
+        "locations": [
+          "London"
+        ],
+        "dates": [
+          "1946",
+          "1999"
+        ],
+        "topic": "musical adaptation of It's a Wonderful Life"
+      },
+      "prompt_tokens": 460,
+      "completion_tokens": 102,
+      "usd": 0.00013
+    },
+    {
+      "id": "ext-021",
+      "article_id": 323,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "David Blunkett",
+          "Tony Blair"
+        ],
+        "organisations": [
+          "BBC Radio Five Live"
+        ],
+        "locations": [
+          "Sheffield"
+        ],
+        "dates": [
+          "5 May"
+        ],
+        "topic": "Blunkett hints at election call"
+      },
+      "prompt_tokens": 328,
+      "completion_tokens": 73,
+      "usd": 9.3e-05
+    },
+    {
+      "id": "ext-022",
+      "article_id": 1538,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "tony blair",
+          "michael howard",
+          "william hague",
+          "charles kennedy",
+          "john major"
+        ],
+        "organisations": [],
+        "locations": [],
+        "dates": [
+          "2001",
+          "1997",
+          "october"
+        ],
+        "topic": "no election tv debate"
+      },
+      "prompt_tokens": 393,
+      "completion_tokens": 85,
+      "usd": 0.00011
+    },
+    {
+      "id": "ext-023",
+      "article_id": 2221,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "robert kilroy-silk"
+        ],
+        "organisations": [
+          "veritas"
+        ],
+        "locations": [
+          "britain",
+          "poland"
+        ],
+        "dates": [],
+        "topic": "kilroy unveils immigration policy"
+      },
+      "prompt_tokens": 420,
+      "completion_tokens": 65,
+      "usd": 0.000102
+    },
+    {
+      "id": "ext-024",
+      "article_id": 197,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Ed Davey",
+          "Charles Kennedy"
+        ],
+        "organisations": [
+          "Lib Dems",
+          "Tories",
+          "Labour"
+        ],
+        "locations": [
+          "England"
+        ],
+        "dates": [
+          "5 May"
+        ],
+        "topic": "Lib Dems predict best ever poll"
+      },
+      "prompt_tokens": 409,
+      "completion_tokens": 80,
+      "usd": 0.000109
+    },
+    {
+      "id": "ext-025",
+      "article_id": 260,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "sir paul sykes"
+        ],
+        "organisations": [
+          "uk independence party",
+          "labour",
+          "liberal democrats",
+          "conservatives",
+          "greens",
+          "electoral commission"
+        ],
+        "locations": [
+          "yorkshire"
+        ],
+        "dates": [
+          "wednesday"
+        ],
+        "topic": "ukip spending in european elections"
+      },
+      "prompt_tokens": 436,
+      "completion_tokens": 95,
+      "usd": 0.000122
+    },
+    {
+      "id": "ext-026",
+      "article_id": 2046,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "Lynton Crosby",
+          "Michael Howard",
+          "John Howard"
+        ],
+        "organisations": [
+          "Conservative Party",
+          "Labour Party",
+          "The Times"
+        ],
+        "locations": [
+          "Australia"
+        ],
+        "dates": [
+          "last October"
+        ],
+        "topic": "Conservative Party election strategy"
+      },
+      "prompt_tokens": 424,
+      "completion_tokens": 85,
+      "usd": 0.000115
+    },
+    {
+      "id": "ext-027",
+      "article_id": 310,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Michael Martin",
+          "Alastair Campbell"
+        ],
+        "organisations": [],
+        "locations": [
+          "Commons"
+        ],
+        "dates": [],
+        "topic": "MPs issued with Blackberry threat"
+      },
+      "prompt_tokens": 415,
+      "completion_tokens": 55,
+      "usd": 9.5e-05
+    },
+    {
+      "id": "ext-028",
+      "article_id": 48,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "Al Aynsley-Green",
+          "Ruth Kelly"
+        ],
+        "organisations": [
+          "Great Ormond Street Hospital",
+          "Department of Health",
+          "Oxford University",
+          "Guy's Hospital Medical School",
+          "University of London",
+          "Oriel College"
+        ],
+        "locations": [
+          "England",
+          "Scotland",
+          "Wales",
+          "Northern Ireland",
+          "Switzerland"
+        ],
+        "dates": [],
+        "topic": "Children's Commissioner for England appointed"
+      },
+      "prompt_tokens": 487,
+      "completion_tokens": 119,
+      "usd": 0.000144
+    },
+    {
+      "id": "ext-029",
+      "article_id": 55,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.8,
+      "predicted": {
+        "people": [
+          "ed davey"
+        ],
+        "organisations": [
+          "liberal democrats",
+          "tories"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "energy savings for pensioners"
+      },
+      "prompt_tokens": 437,
+      "completion_tokens": 57,
+      "usd": 0.0001
+    },
+    {
+      "id": "ext-030",
+      "article_id": 121,
+      "category": "politics",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "jack cunningham",
+          "jim callaghan",
+          "tony blair"
+        ],
+        "organisations": [
+          "labour"
+        ],
+        "locations": [
+          "copeland"
+        ],
+        "dates": [
+          "1997",
+          "1999"
+        ],
+        "topic": "jack cunningham to stand down"
+      },
+      "prompt_tokens": 424,
+      "completion_tokens": 82,
+      "usd": 0.000113
+    },
+    {
+      "id": "ext-031",
+      "article_id": 2110,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Tim Collier",
+          "Phil Murphy",
+          "John Payne",
+          "Chris Rhys Jones",
+          "Richard Wigglesworth"
+        ],
+        "organisations": [],
+        "locations": [
+          "Worcester",
+          "Sale",
+          "Sixways"
+        ],
+        "dates": [
+          "25 February 2000"
+        ],
+        "topic": "Worcester vs Sale match details"
+      },
+      "prompt_tokens": 471,
+      "completion_tokens": 95,
+      "usd": 0.000128
+    },
+    {
+      "id": "ext-032",
+      "article_id": 1883,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "Andy Reid",
+          "Michael Dawson",
+          "Mark Arthur"
+        ],
+        "organisations": [
+          "Tottenham",
+          "Nottingham Forest",
+          "Southampton"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "Tottenham bid for Nottingham Forest players"
+      },
+      "prompt_tokens": 398,
+      "completion_tokens": 71,
+      "usd": 0.000102
+    },
+    {
+      "id": "ext-033",
+      "article_id": 1319,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Michael McIndoe",
+          "Adriano Rigoglioso",
+          "Danny Williams",
+          "Mawson",
+          "Travis Mkandawire",
+          "James Robinson",
+          "Stanley Hyde",
+          "Pittman",
+          "Purdie",
+          "Mills",
+          "Brown",
+          "Stansfield",
+          "Green",
+          "Smith",
+          "Scott",
+          "Ingham",
+          "Mulligan",
+          "Fenton",
+          "Morley",
+          "Priet",
+          "Ryan",
+          "Ravenhill",
+          "Price",
+          "Tierney",
+          "Jackson",
+          "Beardsley",
+          "Coppinger",
+          "Warrington",
+          "Maloney"
+        ],
+        "organisations": [],
+        "locations": [
+          "Hereford",
+          "Doncaster"
+        ],
+        "dates": [],
+        "topic": "Hereford win on penalties against Doncaster"
+      },
+      "prompt_tokens": 476,
+      "completion_tokens": 210,
+      "usd": 0.000197
+    },
+    {
+      "id": "ext-034",
+      "article_id": 91,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Ole Gunnar Solskjaer"
+        ],
+        "organisations": [
+          "Manchester United",
+          "Aftenposten"
+        ],
+        "locations": [
+          "Norway",
+          "Sweden"
+        ],
+        "dates": [
+          "August",
+          "May",
+          "2006"
+        ],
+        "topic": "Solskjaer hopes to return after injury"
+      },
+      "prompt_tokens": 387,
+      "completion_tokens": 90,
+      "usd": 0.000112
+    },
+    {
+      "id": "ext-035",
+      "article_id": 634,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Adrian Mutu",
+          "Alessandro Moggi",
+          "Luciano Moggi"
+        ],
+        "organisations": [
+          "Juventus",
+          "Chelsea",
+          "Fiorentina",
+          "Dinamo Bucharest"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "Adrian Mutu talks with Juventus"
+      },
+      "prompt_tokens": 389,
+      "completion_tokens": 85,
+      "usd": 0.000109
+    },
+    {
+      "id": "ext-036",
+      "article_id": 1826,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Hayley Yelling",
+          "Jolene Byrne",
+          "Louise Damen",
+          "Peter Riley",
+          "Gary Murray",
+          "Glynn Tromans"
+        ],
+        "organisations": [
+          "Reebok",
+          "Great Britain"
+        ],
+        "locations": [
+          "Cardiff",
+          "Bute Park",
+          "Ireland"
+        ],
+        "dates": [
+          "last month",
+          "sunday afternoon"
+        ],
+        "topic": "Cardiff cross-country challenge results"
+      },
+      "prompt_tokens": 395,
+      "completion_tokens": 117,
+      "usd": 0.000129
+    },
+    {
+      "id": "ext-037",
+      "article_id": 297,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Budge Pountney",
+          "Steve Lander",
+          "Robert Horner",
+          "Nigel Gillingham",
+          "Jeff Probyn"
+        ],
+        "organisations": [
+          "Rugby Football Union"
+        ],
+        "locations": [
+          "Northampton",
+          "London"
+        ],
+        "dates": [
+          "5 February",
+          "Thursday night"
+        ],
+        "topic": "Budge Pountney ban and fine"
+      },
+      "prompt_tokens": 394,
+      "completion_tokens": 106,
+      "usd": 0.000123
+    },
+    {
+      "id": "ext-038",
+      "article_id": 95,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 0,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "Taylor Dent",
+          "Juan Ignacio Chela",
+          "Joachim Johansson",
+          "Lleyton Hewitt",
+          "Jaslyn Hewitt",
+          "Olivier Rochus"
+        ],
+        "organisations": [],
+        "locations": [
+          "Adelaide",
+          "Australia",
+          "Belgium"
+        ],
+        "dates": [
+          "Sunday"
+        ],
+        "topic": "Taylor Dent reaches Australian final"
+      },
+      "prompt_tokens": 414,
+      "completion_tokens": 100,
+      "usd": 0.000122
+    },
+    {
+      "id": "ext-039",
+      "article_id": 7,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Tim Henman",
+          "Ivan Ljubicic",
+          "Tommy Robredo",
+          "Nicolas Kiefer"
+        ],
+        "organisations": [
+          "Dubai Open"
+        ],
+        "locations": [
+          "Dubai",
+          "Germany"
+        ],
+        "dates": [],
+        "topic": "Henman defeated in Dubai Open quarter-final"
+      },
+      "prompt_tokens": 474,
+      "completion_tokens": 83,
+      "usd": 0.000121
+    },
+    {
+      "id": "ext-040",
+      "article_id": 8,
+      "category": "sport",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 0,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.2,
+      "predicted": {
+        "people": [
+          "jonny wilkinson",
+          "rob andrew",
+          "jason robinson",
+          "charlie hodgson"
+        ],
+        "organisations": [
+          "newcastle falcons",
+          "england"
+        ],
+        "locations": [
+          "edinburgh",
+          "murrayfield",
+          "canada",
+          "south africa",
+          "australia"
+        ],
+        "dates": [
+          "17 october",
+          "saturday"
+        ],
+        "topic": "jonny wilkinson return from injury"
+      },
+      "prompt_tokens": 434,
+      "completion_tokens": 121,
+      "usd": 0.000138
+    },
+    {
+      "id": "ext-041",
+      "article_id": 2102,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [],
+        "organisations": [
+          "Apple",
+          "idefence"
+        ],
+        "locations": [],
+        "dates": [
+          "2003",
+          "4.7.1"
+        ],
+        "topic": "hacker threat to apple s itunes users"
+      },
+      "prompt_tokens": 424,
+      "completion_tokens": 65,
+      "usd": 0.000103
+    },
+    {
+      "id": "ext-042",
+      "article_id": 36,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [],
+        "organisations": [
+          "Sony",
+          "Nintendo"
+        ],
+        "locations": [
+          "Japan",
+          "Europe",
+          "North America",
+          "US"
+        ],
+        "dates": [
+          "Sunday",
+          "March 2005"
+        ],
+        "topic": "Sony PSP sales and competition with Nintendo"
+      },
+      "prompt_tokens": 454,
+      "completion_tokens": 78,
+      "usd": 0.000115
+    },
+    {
+      "id": "ext-043",
+      "article_id": 1605,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.8,
+      "predicted": {
+        "people": [
+          "Kaz Hirai"
+        ],
+        "organisations": [
+          "Sony",
+          "Nintendo",
+          "Sony Computer Entertainment America"
+        ],
+        "locations": [
+          "US",
+          "Japan",
+          "Europe"
+        ],
+        "dates": [
+          "24 March",
+          "11 March"
+        ],
+        "topic": "Sony PSP console release in the US"
+      },
+      "prompt_tokens": 469,
+      "completion_tokens": 87,
+      "usd": 0.000123
+    },
+    {
+      "id": "ext-044",
+      "article_id": 1159,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.8,
+      "predicted": {
+        "people": [
+          "stephen toulouse"
+        ],
+        "organisations": [
+          "microsoft",
+          "sybari software"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "microsoft investigating spyware trojan"
+      },
+      "prompt_tokens": 481,
+      "completion_tokens": 59,
+      "usd": 0.000108
+    },
+    {
+      "id": "ext-045",
+      "article_id": 20,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [],
+        "organisations": [
+          "FBI",
+          "Federal Bureau of Investigation",
+          "FBI's Internet Fraud Complaint Center"
+        ],
+        "locations": [
+          "US"
+        ],
+        "dates": [
+          "earlier this month"
+        ],
+        "topic": "security warning over FBI virus"
+      },
+      "prompt_tokens": 478,
+      "completion_tokens": 73,
+      "usd": 0.000115
+    },
+    {
+      "id": "ext-046",
+      "article_id": 473,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "george w bush"
+        ],
+        "organisations": [
+          "us federal communications commission",
+          "un telecoms"
+        ],
+        "locations": [
+          "us",
+          "uk"
+        ],
+        "dates": [
+          "june 2004",
+          "2007",
+          "june 2003"
+        ],
+        "topic": "broadband growth in the US"
+      },
+      "prompt_tokens": 501,
+      "completion_tokens": 93,
+      "usd": 0.000131
+    },
+    {
+      "id": "ext-047",
+      "article_id": 1828,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [],
+        "organisations": [
+          "internet corporation for assigned names and numbers",
+          "icann",
+          "nokia",
+          "microsoft",
+          "t-mobile"
+        ],
+        "locations": [
+          "france",
+          "britain"
+        ],
+        "dates": [],
+        "topic": "new internet domain names approval"
+      },
+      "prompt_tokens": 494,
+      "completion_tokens": 78,
+      "usd": 0.000121
+    },
+    {
+      "id": "ext-048",
+      "article_id": 27,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 0,
+        "topic": 0
+      },
+      "case_score": 0.4,
+      "predicted": {
+        "people": [
+          "belinda henderson"
+        ],
+        "organisations": [
+          "3",
+          "rooster"
+        ],
+        "locations": [
+          "london",
+          "uk"
+        ],
+        "dates": [
+          "tuesday evening",
+          "2005"
+        ],
+        "topic": "mobile gig broadcast via 3G phones"
+      },
+      "prompt_tokens": 591,
+      "completion_tokens": 81,
+      "usd": 0.000137
+    },
+    {
+      "id": "ext-049",
+      "article_id": 44,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 1,
+        "locations": 0,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "zhang hemin",
+          "gerry ellis"
+        ],
+        "organisations": [
+          "wolong nature reserve",
+          "intel",
+          "globio"
+        ],
+        "locations": [
+          "sichuan province",
+          "china",
+          "portland",
+          "oregon",
+          "us"
+        ],
+        "dates": [],
+        "topic": "pandas benefit from wireless internet network"
+      },
+      "prompt_tokens": 596,
+      "completion_tokens": 97,
+      "usd": 0.000148
+    },
+    {
+      "id": "ext-050",
+      "article_id": 68,
+      "category": "tech",
+      "called_model": true,
+      "l1_pass": true,
+      "l1_errors": [],
+      "field_scores": {
+        "people": 1,
+        "organisations": 0,
+        "locations": 1,
+        "dates": 1,
+        "topic": 0
+      },
+      "case_score": 0.6,
+      "predicted": {
+        "people": [
+          "Blake Irving"
+        ],
+        "organisations": [
+          "Microsoft",
+          "Google",
+          "AOL",
+          "MSN",
+          "Technorati"
+        ],
+        "locations": [],
+        "dates": [],
+        "topic": "Microsoft launches blogging service MSN Spaces"
+      },
+      "prompt_tokens": 497,
+      "completion_tokens": 69,
+      "usd": 0.000116
+    }
+  ]
+}
