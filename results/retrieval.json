@@ -1,0 +1,1196 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_words": 200,
+  "overlap_words": 40,
+  "top_k": 3,
+  "abstain_cosine": 0.35,
+  "n_chunks": 5968,
+  "recall_at_3": 0.825,
+  "grounded_hits": 33,
+  "grounded_n": 40,
+  "would_abstain_all": 1,
+  "would_abstain_grounded": 1,
+  "would_abstain_adversarial": 0,
+  "questions": [
+    {
+      "id": "rag-001",
+      "type": "grounded",
+      "gold_article_ids": [
+        261
+      ],
+      "top3": [
+        {
+          "article_id": 261,
+          "cosine": 0.7839
+        },
+        {
+          "article_id": 1108,
+          "cosine": 0.4724
+        },
+        {
+          "article_id": 489,
+          "cosine": 0.465
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7839,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-002",
+      "type": "grounded",
+      "gold_article_ids": [
+        261
+      ],
+      "top3": [
+        {
+          "article_id": 261,
+          "cosine": 0.529
+        },
+        {
+          "article_id": 1952,
+          "cosine": 0.4643
+        },
+        {
+          "article_id": 1577,
+          "cosine": 0.3932
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.529,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-003",
+      "type": "grounded",
+      "gold_article_ids": [
+        34
+      ],
+      "top3": [
+        {
+          "article_id": 1299,
+          "cosine": 0.5793
+        },
+        {
+          "article_id": 896,
+          "cosine": 0.5793
+        },
+        {
+          "article_id": 904,
+          "cosine": 0.5423
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.5793,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-004",
+      "type": "grounded",
+      "gold_article_ids": [
+        34
+      ],
+      "top3": [
+        {
+          "article_id": 34,
+          "cosine": 0.745
+        },
+        {
+          "article_id": 904,
+          "cosine": 0.7265
+        },
+        {
+          "article_id": 768,
+          "cosine": 0.6676
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.745,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-005",
+      "type": "grounded",
+      "gold_article_ids": [
+        286
+      ],
+      "top3": [
+        {
+          "article_id": 286,
+          "cosine": 0.6461
+        },
+        {
+          "article_id": 311,
+          "cosine": 0.6219
+        },
+        {
+          "article_id": 483,
+          "cosine": 0.4009
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6461,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-006",
+      "type": "grounded",
+      "gold_article_ids": [
+        286
+      ],
+      "top3": [
+        {
+          "article_id": 311,
+          "cosine": 0.664
+        },
+        {
+          "article_id": 286,
+          "cosine": 0.6421
+        },
+        {
+          "article_id": 483,
+          "cosine": 0.3862
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.664,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-007",
+      "type": "grounded",
+      "gold_article_ids": [
+        725
+      ],
+      "top3": [
+        {
+          "article_id": 725,
+          "cosine": 0.615
+        },
+        {
+          "article_id": 1773,
+          "cosine": 0.4663
+        },
+        {
+          "article_id": 205,
+          "cosine": 0.4561
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.615,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-008",
+      "type": "grounded",
+      "gold_article_ids": [
+        1884
+      ],
+      "top3": [
+        {
+          "article_id": 1884,
+          "cosine": 0.6351
+        },
+        {
+          "article_id": 1295,
+          "cosine": 0.4525
+        },
+        {
+          "article_id": 1487,
+          "cosine": 0.4513
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6351,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-009",
+      "type": "grounded",
+      "gold_article_ids": [
+        593
+      ],
+      "top3": [
+        {
+          "article_id": 458,
+          "cosine": 0.6909
+        },
+        {
+          "article_id": 593,
+          "cosine": 0.6442
+        },
+        {
+          "article_id": 458,
+          "cosine": 0.5875
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6909,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-010",
+      "type": "grounded",
+      "gold_article_ids": [
+        593
+      ],
+      "top3": [
+        {
+          "article_id": 1180,
+          "cosine": 0.6537
+        },
+        {
+          "article_id": 458,
+          "cosine": 0.6449
+        },
+        {
+          "article_id": 458,
+          "cosine": 0.6093
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.6537,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-011",
+      "type": "grounded",
+      "gold_article_ids": [
+        765
+      ],
+      "top3": [
+        {
+          "article_id": 765,
+          "cosine": 0.7685
+        },
+        {
+          "article_id": 973,
+          "cosine": 0.4671
+        },
+        {
+          "article_id": 1287,
+          "cosine": 0.4482
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7685,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-012",
+      "type": "grounded",
+      "gold_article_ids": [
+        765
+      ],
+      "top3": [
+        {
+          "article_id": 765,
+          "cosine": 0.5386
+        },
+        {
+          "article_id": 1474,
+          "cosine": 0.3618
+        },
+        {
+          "article_id": 1677,
+          "cosine": 0.3575
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.5386,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-013",
+      "type": "grounded",
+      "gold_article_ids": [
+        1618
+      ],
+      "top3": [
+        {
+          "article_id": 1618,
+          "cosine": 0.7606
+        },
+        {
+          "article_id": 1456,
+          "cosine": 0.5096
+        },
+        {
+          "article_id": 1310,
+          "cosine": 0.5049
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7606,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-014",
+      "type": "grounded",
+      "gold_article_ids": [
+        1618
+      ],
+      "top3": [
+        {
+          "article_id": 1618,
+          "cosine": 0.3256
+        },
+        {
+          "article_id": 557,
+          "cosine": 0.2992
+        },
+        {
+          "article_id": 1380,
+          "cosine": 0.2959
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.3256,
+      "would_abstain": true
+    },
+    {
+      "id": "rag-015",
+      "type": "grounded",
+      "gold_article_ids": [
+        665
+      ],
+      "top3": [
+        {
+          "article_id": 295,
+          "cosine": 0.5302
+        },
+        {
+          "article_id": 295,
+          "cosine": 0.5123
+        },
+        {
+          "article_id": 813,
+          "cosine": 0.5092
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.5302,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-016",
+      "type": "grounded",
+      "gold_article_ids": [
+        2196
+      ],
+      "top3": [
+        {
+          "article_id": 285,
+          "cosine": 0.5068
+        },
+        {
+          "article_id": 2196,
+          "cosine": 0.4599
+        },
+        {
+          "article_id": 2196,
+          "cosine": 0.455
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.5068,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-017",
+      "type": "grounded",
+      "gold_article_ids": [
+        2196
+      ],
+      "top3": [
+        {
+          "article_id": 2196,
+          "cosine": 0.6723
+        },
+        {
+          "article_id": 769,
+          "cosine": 0.5946
+        },
+        {
+          "article_id": 2196,
+          "cosine": 0.5607
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6723,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-018",
+      "type": "grounded",
+      "gold_article_ids": [
+        2019
+      ],
+      "top3": [
+        {
+          "article_id": 2019,
+          "cosine": 0.7033
+        },
+        {
+          "article_id": 1499,
+          "cosine": 0.6254
+        },
+        {
+          "article_id": 147,
+          "cosine": 0.5881
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7033,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-019",
+      "type": "grounded",
+      "gold_article_ids": [
+        2019
+      ],
+      "top3": [
+        {
+          "article_id": 2019,
+          "cosine": 0.5008
+        },
+        {
+          "article_id": 549,
+          "cosine": 0.4744
+        },
+        {
+          "article_id": 113,
+          "cosine": 0.4744
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.5008,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-020",
+      "type": "grounded",
+      "gold_article_ids": [
+        528
+      ],
+      "top3": [
+        {
+          "article_id": 1417,
+          "cosine": 0.4423
+        },
+        {
+          "article_id": 528,
+          "cosine": 0.3799
+        },
+        {
+          "article_id": 814,
+          "cosine": 0.3609
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.4423,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-021",
+      "type": "grounded",
+      "gold_article_ids": [
+        1575
+      ],
+      "top3": [
+        {
+          "article_id": 1575,
+          "cosine": 0.6805
+        },
+        {
+          "article_id": 865,
+          "cosine": 0.5549
+        },
+        {
+          "article_id": 1888,
+          "cosine": 0.5391
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6805,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-022",
+      "type": "grounded",
+      "gold_article_ids": [
+        1575
+      ],
+      "top3": [
+        {
+          "article_id": 1575,
+          "cosine": 0.5658
+        },
+        {
+          "article_id": 865,
+          "cosine": 0.5305
+        },
+        {
+          "article_id": 865,
+          "cosine": 0.5281
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.5658,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-023",
+      "type": "grounded",
+      "gold_article_ids": [
+        120
+      ],
+      "top3": [
+        {
+          "article_id": 120,
+          "cosine": 0.6173
+        },
+        {
+          "article_id": 733,
+          "cosine": 0.4519
+        },
+        {
+          "article_id": 233,
+          "cosine": 0.4082
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6173,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-024",
+      "type": "grounded",
+      "gold_article_ids": [
+        120
+      ],
+      "top3": [
+        {
+          "article_id": 120,
+          "cosine": 0.3671
+        },
+        {
+          "article_id": 67,
+          "cosine": 0.347
+        },
+        {
+          "article_id": 2114,
+          "cosine": 0.3458
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.3671,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-025",
+      "type": "grounded",
+      "gold_article_ids": [
+        296
+      ],
+      "top3": [
+        {
+          "article_id": 296,
+          "cosine": 0.6413
+        },
+        {
+          "article_id": 559,
+          "cosine": 0.5369
+        },
+        {
+          "article_id": 1654,
+          "cosine": 0.514
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6413,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-026",
+      "type": "grounded",
+      "gold_article_ids": [
+        2090
+      ],
+      "top3": [
+        {
+          "article_id": 210,
+          "cosine": 0.4005
+        },
+        {
+          "article_id": 2090,
+          "cosine": 0.3677
+        },
+        {
+          "article_id": 1559,
+          "cosine": 0.3482
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.4005,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-027",
+      "type": "grounded",
+      "gold_article_ids": [
+        116
+      ],
+      "top3": [
+        {
+          "article_id": 1504,
+          "cosine": 0.7213
+        },
+        {
+          "article_id": 116,
+          "cosine": 0.6159
+        },
+        {
+          "article_id": 1058,
+          "cosine": 0.4647
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7213,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-028",
+      "type": "grounded",
+      "gold_article_ids": [
+        136
+      ],
+      "top3": [
+        {
+          "article_id": 136,
+          "cosine": 0.7939
+        },
+        {
+          "article_id": 1166,
+          "cosine": 0.3628
+        },
+        {
+          "article_id": 995,
+          "cosine": 0.3515
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7939,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-029",
+      "type": "grounded",
+      "gold_article_ids": [
+        323
+      ],
+      "top3": [
+        {
+          "article_id": 323,
+          "cosine": 0.6608
+        },
+        {
+          "article_id": 824,
+          "cosine": 0.6485
+        },
+        {
+          "article_id": 6,
+          "cosine": 0.5776
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6608,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-030",
+      "type": "grounded",
+      "gold_article_ids": [
+        323
+      ],
+      "top3": [
+        {
+          "article_id": 493,
+          "cosine": 0.5804
+        },
+        {
+          "article_id": 827,
+          "cosine": 0.5804
+        },
+        {
+          "article_id": 978,
+          "cosine": 0.5344
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.5804,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-031",
+      "type": "grounded",
+      "gold_article_ids": [
+        1538
+      ],
+      "top3": [
+        {
+          "article_id": 748,
+          "cosine": 0.6573
+        },
+        {
+          "article_id": 1538,
+          "cosine": 0.6255
+        },
+        {
+          "article_id": 748,
+          "cosine": 0.5864
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6573,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-032",
+      "type": "grounded",
+      "gold_article_ids": [
+        2221
+      ],
+      "top3": [
+        {
+          "article_id": 675,
+          "cosine": 0.5584
+        },
+        {
+          "article_id": 1630,
+          "cosine": 0.5491
+        },
+        {
+          "article_id": 1604,
+          "cosine": 0.5473
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.5584,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-033",
+      "type": "grounded",
+      "gold_article_ids": [
+        197
+      ],
+      "top3": [
+        {
+          "article_id": 197,
+          "cosine": 0.5724
+        },
+        {
+          "article_id": 1497,
+          "cosine": 0.5158
+        },
+        {
+          "article_id": 2044,
+          "cosine": 0.4862
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.5724,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-034",
+      "type": "grounded",
+      "gold_article_ids": [
+        260
+      ],
+      "top3": [
+        {
+          "article_id": 260,
+          "cosine": 0.7765
+        },
+        {
+          "article_id": 919,
+          "cosine": 0.6234
+        },
+        {
+          "article_id": 1604,
+          "cosine": 0.5362
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.7765,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-035",
+      "type": "grounded",
+      "gold_article_ids": [
+        2046
+      ],
+      "top3": [
+        {
+          "article_id": 256,
+          "cosine": 0.4859
+        },
+        {
+          "article_id": 516,
+          "cosine": 0.4475
+        },
+        {
+          "article_id": 269,
+          "cosine": 0.4365
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.4859,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-036",
+      "type": "grounded",
+      "gold_article_ids": [
+        48
+      ],
+      "top3": [
+        {
+          "article_id": 48,
+          "cosine": 0.6451
+        },
+        {
+          "article_id": 48,
+          "cosine": 0.5559
+        },
+        {
+          "article_id": 1543,
+          "cosine": 0.4108
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6451,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-037",
+      "type": "grounded",
+      "gold_article_ids": [
+        121
+      ],
+      "top3": [
+        {
+          "article_id": 35,
+          "cosine": 0.5924
+        },
+        {
+          "article_id": 121,
+          "cosine": 0.5923
+        },
+        {
+          "article_id": 1390,
+          "cosine": 0.5919
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.5924,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-038",
+      "type": "grounded",
+      "gold_article_ids": [
+        91
+      ],
+      "top3": [
+        {
+          "article_id": 91,
+          "cosine": 0.689
+        },
+        {
+          "article_id": 118,
+          "cosine": 0.4702
+        },
+        {
+          "article_id": 1802,
+          "cosine": 0.4604
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.689,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-039",
+      "type": "grounded",
+      "gold_article_ids": [
+        8
+      ],
+      "top3": [
+        {
+          "article_id": 1519,
+          "cosine": 0.6851
+        },
+        {
+          "article_id": 1449,
+          "cosine": 0.6706
+        },
+        {
+          "article_id": 1294,
+          "cosine": 0.6239
+        }
+      ],
+      "hit_at_3": false,
+      "best_cosine": 0.6851,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-040",
+      "type": "grounded",
+      "gold_article_ids": [
+        2102
+      ],
+      "top3": [
+        {
+          "article_id": 2102,
+          "cosine": 0.6813
+        },
+        {
+          "article_id": 1130,
+          "cosine": 0.5857
+        },
+        {
+          "article_id": 234,
+          "cosine": 0.5107
+        }
+      ],
+      "hit_at_3": true,
+      "best_cosine": 0.6813,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-041",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 1392,
+          "cosine": 0.3513
+        },
+        {
+          "article_id": 443,
+          "cosine": 0.331
+        },
+        {
+          "article_id": 1120,
+          "cosine": 0.3181
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.3513,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-042",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 626,
+          "cosine": 0.4002
+        },
+        {
+          "article_id": 1735,
+          "cosine": 0.3919
+        },
+        {
+          "article_id": 1735,
+          "cosine": 0.3878
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.4002,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-043",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 142,
+          "cosine": 0.4651
+        },
+        {
+          "article_id": 2103,
+          "cosine": 0.4492
+        },
+        {
+          "article_id": 1181,
+          "cosine": 0.4436
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.4651,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-044",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 577,
+          "cosine": 0.3771
+        },
+        {
+          "article_id": 1777,
+          "cosine": 0.3619
+        },
+        {
+          "article_id": 1939,
+          "cosine": 0.3582
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.3771,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-045",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 1594,
+          "cosine": 0.559
+        },
+        {
+          "article_id": 1809,
+          "cosine": 0.5517
+        },
+        {
+          "article_id": 6,
+          "cosine": 0.5455
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.559,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-046",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 1892,
+          "cosine": 0.4812
+        },
+        {
+          "article_id": 2126,
+          "cosine": 0.4797
+        },
+        {
+          "article_id": 1788,
+          "cosine": 0.4678
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.4812,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-047",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 294,
+          "cosine": 0.3501
+        },
+        {
+          "article_id": 294,
+          "cosine": 0.3249
+        },
+        {
+          "article_id": 173,
+          "cosine": 0.3243
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.3501,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-048",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 1116,
+          "cosine": 0.4495
+        },
+        {
+          "article_id": 1109,
+          "cosine": 0.4374
+        },
+        {
+          "article_id": 836,
+          "cosine": 0.4254
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.4495,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-049",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 443,
+          "cosine": 0.3844
+        },
+        {
+          "article_id": 1482,
+          "cosine": 0.3774
+        },
+        {
+          "article_id": 1009,
+          "cosine": 0.3706
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.3844,
+      "would_abstain": false
+    },
+    {
+      "id": "rag-050",
+      "type": "adversarial",
+      "gold_article_ids": [],
+      "top3": [
+        {
+          "article_id": 1370,
+          "cosine": 0.5034
+        },
+        {
+          "article_id": 809,
+          "cosine": 0.4885
+        },
+        {
+          "article_id": 12,
+          "cosine": 0.4867
+        }
+      ],
+      "hit_at_3": null,
+      "best_cosine": 0.5034,
+      "would_abstain": false
+    }
+  ]
+}
