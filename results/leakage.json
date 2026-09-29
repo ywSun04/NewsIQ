@@ -1,0 +1,171 @@
+{
+  "label_words": {
+    "test_articles": 100,
+    "articles_containing_any_label_word": 27,
+    "articles_containing_their_own_label_word": 20,
+    "label_word_occurrences": {
+      "business": 15,
+      "tech": 3,
+      "entertainment": 3,
+      "sport": 6,
+      "politics": 1
+    },
+    "words_stripped": [
+      "business",
+      "entertainment",
+      "politics",
+      "sport",
+      "tech"
+    ]
+  },
+  "models": {
+    "multinomial_nb": {
+      "weighted_f1_before": 0.9499,
+      "weighted_f1_after_stripping_label_words": 0.9499,
+      "per_label_after": {
+        "business": {
+          "support": 23,
+          "f1": 0.9333
+        },
+        "entertainment": {
+          "support": 17,
+          "f1": 0.9375
+        },
+        "politics": {
+          "support": 19,
+          "f1": 0.95
+        },
+        "sport": {
+          "support": 23,
+          "f1": 1.0
+        },
+        "tech": {
+          "support": 18,
+          "f1": 0.9189
+        }
+      }
+    },
+    "calibrated_linear_svc": {
+      "weighted_f1_before": 0.9798,
+      "weighted_f1_after_stripping_label_words": 0.9798,
+      "per_label_after": {
+        "business": {
+          "support": 23,
+          "f1": 0.9545
+        },
+        "entertainment": {
+          "support": 17,
+          "f1": 1.0
+        },
+        "politics": {
+          "support": 19,
+          "f1": 0.9744
+        },
+        "sport": {
+          "support": 23,
+          "f1": 1.0
+        },
+        "tech": {
+          "support": 18,
+          "f1": 0.973
+        }
+      }
+    }
+  },
+  "near_duplicates": {
+    "method": "Jaccard on normalised word sets",
+    "near_duplicate_at": 0.9,
+    "max_jaccard": {
+      "test_id": 121,
+      "train_id": 1390,
+      "jaccard": 1.0
+    },
+    "pairs": [
+      {
+        "test_id": 121,
+        "train_id": 1390,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 477,
+        "train_id": 1599,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 493,
+        "train_id": 827,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 510,
+        "train_id": 265,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 837,
+        "train_id": 668,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 889,
+        "train_id": 1049,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 1033,
+        "train_id": 1776,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 2167,
+        "train_id": 721,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 2206,
+        "train_id": 2038,
+        "jaccard": 1.0
+      },
+      {
+        "test_id": 1611,
+        "train_id": 805,
+        "jaccard": 0.9788
+      }
+    ]
+  },
+  "score_without_near_duplicate_test_articles": {
+    "multinomial_nb": {
+      "dropped_test_ids": [
+        121,
+        477,
+        493,
+        510,
+        837,
+        889,
+        1033,
+        1611,
+        2167,
+        2206
+      ],
+      "n": 90,
+      "weighted_f1": 0.9446
+    },
+    "calibrated_linear_svc": {
+      "dropped_test_ids": [
+        121,
+        477,
+        493,
+        510,
+        837,
+        889,
+        1033,
+        1611,
+        2167,
+        2206
+      ],
+      "n": 90,
+      "weighted_f1": 0.9776
+    }
+  },
+  "note": "Before is the forced test weighted F1 of the model trained on the original text. After retrains on training text with the five category names removed and scores test text with the same words removed. The published test score is the before number."
+}

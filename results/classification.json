@@ -1,0 +1,150 @@
+{
+  "target_weighted_f1": 0.85,
+  "target_note": "The 0.85 figure is the objective from the proposal. The measured test weighted F1 is the result.",
+  "primary_metric": "weighted F1 of the forced argmax prediction on the 100-article test split",
+  "hyperparameters_fixed_before_test": {
+    "tfidf": "unigrams, english stop words, min_df 2, max_df 0.95",
+    "multinomial_nb": "sklearn defaults",
+    "linear_svc": "C 1, random_state 42, sigmoid calibration, 5-fold on the training split only"
+  },
+  "split": {
+    "train": 1925,
+    "validation": 200,
+    "test": 100,
+    "threshold_selected_on": "validation",
+    "test_used_for_fitting": false,
+    "test_used_for_threshold": false
+  },
+  "majority_baseline": {
+    "predicted_class": "sport",
+    "weighted_f1": 0.086,
+    "accuracy": 0.23,
+    "per_label": {
+      "business": {
+        "support": 23,
+        "f1": 0.0
+      },
+      "entertainment": {
+        "support": 17,
+        "f1": 0.0
+      },
+      "politics": {
+        "support": 19,
+        "f1": 0.0
+      },
+      "sport": {
+        "support": 23,
+        "f1": 0.374
+      },
+      "tech": {
+        "support": 18,
+        "f1": 0.0
+      }
+    }
+  },
+  "keyword_baseline": {
+    "weighted_f1_abstention_counts_as_miss": 0.9125,
+    "source": "results/keyword_baseline.json"
+  },
+  "models": {
+    "multinomial_nb": {
+      "weighted_f1": 0.9499,
+      "accuracy": 0.95,
+      "per_label": {
+        "business": {
+          "support": 23,
+          "f1": 0.9333
+        },
+        "entertainment": {
+          "support": 17,
+          "f1": 0.9375
+        },
+        "politics": {
+          "support": 19,
+          "f1": 0.95
+        },
+        "sport": {
+          "support": 23,
+          "f1": 1.0
+        },
+        "tech": {
+          "support": 18,
+          "f1": 0.9189
+        }
+      },
+      "weighted_f1_abstention_counts_as_miss": 0.8463,
+      "target_met": true,
+      "above_keyword_baseline_on_forced_f1": true
+    },
+    "calibrated_linear_svc": {
+      "weighted_f1": 0.9798,
+      "accuracy": 0.98,
+      "per_label": {
+        "business": {
+          "support": 23,
+          "f1": 0.9545
+        },
+        "entertainment": {
+          "support": 17,
+          "f1": 1.0
+        },
+        "politics": {
+          "support": 19,
+          "f1": 0.9744
+        },
+        "sport": {
+          "support": 23,
+          "f1": 1.0
+        },
+        "tech": {
+          "support": 18,
+          "f1": 0.973
+        }
+      },
+      "weighted_f1_abstention_counts_as_miss": 0.8996,
+      "target_met": true,
+      "above_keyword_baseline_on_forced_f1": true
+    }
+  },
+  "test_errors_forced": {
+    "multinomial_nb": [
+      {
+        "article_id": 19,
+        "truth": "tech",
+        "prediction": "business"
+      },
+      {
+        "article_id": 246,
+        "truth": "entertainment",
+        "prediction": "tech"
+      },
+      {
+        "article_id": 967,
+        "truth": "entertainment",
+        "prediction": "politics"
+      },
+      {
+        "article_id": 1011,
+        "truth": "business",
+        "prediction": "tech"
+      },
+      {
+        "article_id": 1731,
+        "truth": "business",
+        "prediction": "politics"
+      }
+    ],
+    "calibrated_linear_svc": [
+      {
+        "article_id": 1011,
+        "truth": "business",
+        "prediction": "tech"
+      },
+      {
+        "article_id": 1731,
+        "truth": "business",
+        "prediction": "politics"
+      }
+    ]
+  }
+}
