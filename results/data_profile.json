@@ -1,0 +1,16 @@
+{
+  "source": "https://storage.googleapis.com/download.tensorflow.org/data/bbc-text.csv",
+  "path": "data/bbc-text.csv",
+  "rows": 2225,
+  "columns": [
+    "category",
+    "text"
+  ],
+  "counts": {
+    "business": 510,
+    "entertainment": 386,
+    "politics": 417,
+    "sport": 511,
+    "tech": 401
+  }
+}
