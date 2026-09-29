@@ -19,3 +19,14 @@ python scripts/download_bbc.py
 This writes `data/bbc-text.csv`. That file is gitignored.
 
 An OpenRouter API key is not required for this download.
+
+## Page
+
+Train the classifiers once, then start the page:
+
+```bash
+python src/classify.py
+streamlit run app.py
+```
+
+Copy `.env.example` to `.env` and set `OPENROUTER_API_KEY` before using archive answers or extraction. Classification does not call the generator. Model files in `models/` and the embedding cache in `data/embeddings/` stay on the machine that built them.

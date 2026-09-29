@@ -1,0 +1,110 @@
+{
+  "banner": "BBC News 2004-2005",
+  "classification": {
+    "model": "calibrated_linear_svc",
+    "model_label": "TF-IDF + calibrated LinearSVC",
+    "threshold": 0.9,
+    "abstain": false,
+    "label": "business",
+    "top_label": "business",
+    "top_probability": 0.981,
+    "ranked": [
+      {
+        "label": "business",
+        "probability": 0.981
+      },
+      {
+        "label": "politics",
+        "probability": 0.0061
+      },
+      {
+        "label": "sport",
+        "probability": 0.0051
+      },
+      {
+        "label": "entertainment",
+        "probability": 0.0044
+      },
+      {
+        "label": "tech",
+        "probability": 0.0036
+      }
+    ],
+    "message": "business"
+  },
+  "rag": {
+    "question": "Which country awarded Burren Energy two new oil exploration contracts?",
+    "best_cosine": 0.7839,
+    "abstain_cosine": 0.5,
+    "called_model": true,
+    "usd": 0.000126,
+    "prompt_tokens": 733,
+    "completion_tokens": 26,
+    "temperature": 0,
+    "max_tokens": 400,
+    "abstain": false,
+    "abstain_reason": null,
+    "answer": "egypt",
+    "citations": [
+      {
+        "passage": 1,
+        "article_id": 261,
+        "category": "business",
+        "cosine": 0.7839,
+        "snippet": "burren awarded egyptian contracts british energy firm burren energy has been awarded two potentially lucrative oil exploration contracts in egypt. the company successfully bid for the two contracts granted by government owned oil firms cove"
+      }
+    ],
+    "passages": [
+      {
+        "passage": 1,
+        "article_id": 261,
+        "category": "business",
+        "cosine": 0.7839,
+        "text": "burren awarded egyptian contracts british energy firm burren energy has been awarded two potentially lucrative oil exploration contracts in egypt. the company successfully bid for the two contracts granted by government owned oil firms cove"
+      },
+      {
+        "passage": 2,
+        "article_id": 1108,
+        "category": "business",
+        "cosine": 0.4724,
+        "text": "group said its belief that the path of oil in the area actually moved further to the west had proved correct. this area does need more appraisal drilling but it looks very strong dr mike watts head of exploration said. chief executive bill "
+      },
+      {
+        "passage": 3,
+        "article_id": 489,
+        "category": "business",
+        "cosine": 0.465,
+        "text": "the company was liable to pay taxes under its production-sharing contract. the company said the rate would be about 900 rupees ($20.40; \u00a310.50) per tonne or seven barrels of oil. a spokesman for the firm said that the tax would wipe 5% of t"
+      }
+    ]
+  },
+  "extraction": {
+    "called_model": true,
+    "l1_pass": true,
+    "l1_errors": [],
+    "fields": {
+      "people": [
+        "Bernie Ebbers",
+        "David Myers",
+        "Reid Weingarten",
+        "Scott Sullivan"
+      ],
+      "organisations": [
+        "WorldCom"
+      ],
+      "locations": [],
+      "dates": [
+        "2002",
+        "Monday"
+      ],
+      "topic": "WorldCom fraud trial and testimony"
+    },
+    "usd": 0.000141,
+    "prompt_tokens": 617,
+    "completion_tokens": 80,
+    "temperature": 0,
+    "max_tokens": 500
+  },
+  "session_calls": 2,
+  "session_usd": 0.000267
+}

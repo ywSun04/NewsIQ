@@ -85,3 +85,7 @@
 {"task": "extraction", "id": "ext-048", "model": "openai/gpt-4o-mini", "prompt_tokens": 591, "completion_tokens": 81, "usd": 0.000137}
 {"task": "extraction", "id": "ext-049", "model": "openai/gpt-4o-mini", "prompt_tokens": 596, "completion_tokens": 97, "usd": 0.000148}
 {"task": "extraction", "id": "ext-050", "model": "openai/gpt-4o-mini", "prompt_tokens": 497, "completion_tokens": 69, "usd": 0.000116}
+{"task": "ui_rag", "model": "openai/gpt-4o-mini", "prompt_tokens": 733, "completion_tokens": 26, "usd": 0.000126}
+{"task": "ui_extract", "model": "openai/gpt-4o-mini", "prompt_tokens": 617, "completion_tokens": 80, "usd": 0.000141}
+{"task": "ui_rag", "model": "openai/gpt-4o-mini", "prompt_tokens": 733, "completion_tokens": 26, "usd": 0.000126}
+{"task": "ui_extract", "model": "openai/gpt-4o-mini", "prompt_tokens": 617, "completion_tokens": 80, "usd": 0.000141}
