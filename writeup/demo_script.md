@@ -26,11 +26,11 @@
 
 ## 3. 弃权
 
-点 Load a text below the threshold，再点 Classify。屏幕上要出现：Not classified. Hand this article to a person.
+点 Load a news article below the threshold，再点 Classify。装入的是语料第 1731 篇，讲 Crossrail。金标栏目是 business。屏幕上要出现：Not classified. Hand this article to a person. 最高类是 politics，置信度大约 0.88，门槛 0.90。
 
 说：
 
-> This text is below the threshold. The system does not assign a class. It hands the article to a person.
+> This is a real BBC article. The highest class is politics at about 0.88, below 0.90, so the page does not assign a desk. The handoff is that one sentence. There is no review queue.
 
 ## 4. 语料里能回答的问题
 
@@ -46,7 +46,7 @@
 
 说：
 
-> This question is outside the 2004 to 2005 archive. The best passage is below the cutoff, so the generator is not called, and the system says the corpus does not contain sufficient evidence.
+> This question is outside the 2004 to 2005 archive. The best passage is below 0.50, so the generator is not called. That cutoff was set on this same set of 50 questions, after seeing that 0.35 would have stopped none of the out-of-archive questions. It is not an unseen test.
 
 ## 6. 抽取
 
@@ -54,7 +54,7 @@
 
 说：
 
-> These are the five fields: people, organisations, locations, dates, and topic. This call's cost is shown here. The session stops at 30 calls or 5 cents.
+> These are the five fields: people, organisations, locations, dates, and topic. This call's cost is shown here. The session stops before the next request at 30 HTTP attempts or 5 cents.
 
 ## 7. 收束，这几句必须说
 

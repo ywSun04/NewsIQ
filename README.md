@@ -14,7 +14,7 @@ Priya is a content operator. She works in English only. She does not publish aut
 | Ask the archive | One question | A short answer and the passage it came from, or the sentence "The corpus does not contain sufficient evidence." If the closest passage is below cosine 0.50, the page does not call the generator. |
 | Extract | One article | JSON with people, organisations, locations, dates, and a topic of three to eight words, plus the cost of that call. |
 
-One article or one question at a time. There is no batch of 200, and there is no review button. Before a new generator call, the page stops at 30 recorded calls or USD 0.05. A call already sent can finish past that line. Classification does not call the generator.
+One article or one question at a time. There is no batch of 200, and there is no review button. Before each new HTTP request, the page stops at 30 attempts or USD 0.05. One button can send a second request when the first reply is not usable JSON, and both count. A request already sent can finish past that line. Classification does not call the generator.
 
 ## Architecture
 

@@ -26,13 +26,21 @@ def session_message(calls, usd):
     )
 
 
-def sample_article():
-    lines = (ROOT / "data" / "sample" / "business.txt").read_text(encoding="utf-8").splitlines()
+def _sample_body(name):
+    lines = (ROOT / "data" / "sample" / name).read_text(encoding="utf-8").splitlines()
     body = [
         line for line in lines
         if line and not line.startswith("article_id:") and not line.startswith("category:")
     ]
     return "\n".join(body).strip()
+
+
+def sample_article():
+    return _sample_body("business.txt")
+
+
+def below_threshold_article():
+    return _sample_body("below_threshold.txt")
 
 
 def thresholds():
@@ -101,7 +109,27 @@ def _call(function, *args):
     try:
         return function(*args), None
     except (SystemExit, json.JSONDecodeError, TimeoutError) as error:
-        return None, str(error)
+        message = error.code if isinstance(error, SystemExit) and isinstance(error.code, str) else str(error)
+        return None, message or "OPENROUTER_API_KEY is missing from .env"
+
+
+def _read_key():
+    try:
+        return extract.load_key(), None
+    except SystemExit as error:
+        message = error.code if isinstance(error.code, str) and error.code else "OPENROUTER_API_KEY is missing from .env"
+        return None, message
+
+
+def _usd(prompt_tokens, completion_tokens, input_rate, output_rate):
+    return round(prompt_tokens * input_rate + completion_tokens * output_rate, 6)
+
+
+def page_rag_view(abstain, answer, citations):
+    """Page display only. This does not rescore results/rag.json."""
+    if abstain or not citations:
+        return True, rag_answer.INSUFFICIENT, []
+    return False, answer, citations
 
 
 def answer_question(question, calls, usd):
@@ -144,49 +172,69 @@ def answer_question(question, calls, usd):
     if extract.session_blocked(calls, usd):
         result["error"] = session_message(calls, usd)
         return result
+    key, key_error = _read_key()
+    if key_error:
+        result["error"] = key_error
+        return result
     evidence = rag_answer.evidence_block(hits, chunks, categories)
-    raw, prompt_tokens, completion_tokens = None, 0, 0
+    prompt_tokens, completion_tokens = 0, 0
+    http_attempts = []
+    parsed = None
     for _ in range(2):
-        payload, error = _call(rag_answer.call_model, extract.load_key(), question, evidence)
+        spent = _usd(
+            prompt_tokens, completion_tokens,
+            rag_answer.INPUT_USD_PER_TOKEN, rag_answer.OUTPUT_USD_PER_TOKEN,
+        )
+        if extract.session_blocked(calls + len(http_attempts), usd + spent):
+            break
+        payload, error = _call(rag_answer.call_model, key, question, evidence, http_attempts)
         if error:
-            result["error"] = error
+            cost = _usd(
+                prompt_tokens, completion_tokens,
+                rag_answer.INPUT_USD_PER_TOKEN, rag_answer.OUTPUT_USD_PER_TOKEN,
+            )
+            result.update({
+                "error": error,
+                "called_model": bool(http_attempts),
+                "http_attempts": len(http_attempts),
+                "usd": cost,
+                "prompt_tokens": prompt_tokens,
+                "completion_tokens": completion_tokens,
+            })
             if prompt_tokens or completion_tokens:
-                cost = prompt_tokens * rag_answer.INPUT_USD_PER_TOKEN + completion_tokens * rag_answer.OUTPUT_USD_PER_TOKEN
-                result["called_model"] = True
-                result["usd"] = round(cost, 6)
-                result["prompt_tokens"] = prompt_tokens
-                result["completion_tokens"] = completion_tokens
                 log_cost("ui_rag", prompt_tokens, completion_tokens, cost)
             return result
         piece, piece_prompt, piece_completion = payload
-        raw = piece
         prompt_tokens += piece_prompt
         completion_tokens += piece_completion
         try:
-            abstain, answer, indexes = rag_answer.parse_payload(raw)
-            break
-        except json.JSONDecodeError:
-            continue
-    else:
-        result["error"] = "The model did not return JSON."
-        result["called_model"] = True
-        cost = prompt_tokens * rag_answer.INPUT_USD_PER_TOKEN + completion_tokens * rag_answer.OUTPUT_USD_PER_TOKEN
-        result["usd"] = round(cost, 6)
-        result["prompt_tokens"] = prompt_tokens
-        result["completion_tokens"] = completion_tokens
+            abstain, answer, indexes = rag_answer.parse_payload(piece)
+            citations = [] if abstain else rag_answer.citation_records(hits, chunks, categories, indexes)
+            parsed = (abstain, answer, citations)
+            if abstain or citations:
+                break
+        except (json.JSONDecodeError, AttributeError, TypeError, ValueError):
+            parsed = None
+    cost = _usd(
+        prompt_tokens, completion_tokens,
+        rag_answer.INPUT_USD_PER_TOKEN, rag_answer.OUTPUT_USD_PER_TOKEN,
+    )
+    if http_attempts and (prompt_tokens or completion_tokens):
         log_cost("ui_rag", prompt_tokens, completion_tokens, cost)
-        return result
-    cost = prompt_tokens * rag_answer.INPUT_USD_PER_TOKEN + completion_tokens * rag_answer.OUTPUT_USD_PER_TOKEN
-    log_cost("ui_rag", prompt_tokens, completion_tokens, cost)
+    if parsed is None:
+        shown_abstain, shown_answer, shown_citations = True, rag_answer.INSUFFICIENT, []
+    else:
+        shown_abstain, shown_answer, shown_citations = page_rag_view(*parsed)
     result.update({
-        "called_model": True,
-        "abstain": abstain,
-        "abstain_reason": "model" if abstain else None,
-        "answer": rag_answer.INSUFFICIENT if abstain else answer,
-        "citations": [] if abstain else rag_answer.citation_records(hits, chunks, categories, indexes),
+        "called_model": bool(http_attempts),
+        "http_attempts": len(http_attempts),
+        "abstain": shown_abstain,
+        "abstain_reason": "model" if shown_abstain else None,
+        "answer": shown_answer,
+        "citations": shown_citations,
         "prompt_tokens": prompt_tokens,
         "completion_tokens": completion_tokens,
-        "usd": round(cost, 6),
+        "usd": cost,
     })
     return result
 
@@ -199,41 +247,73 @@ def extract_article(article, calls, usd):
         return {
             "error": session_message(calls, usd),
             "called_model": False,
+            "http_attempts": 0,
             "usd": 0.0,
         }
+    key, key_error = _read_key()
+    if key_error:
+        return {"error": key_error, "called_model": False, "http_attempts": 0, "usd": 0.0}
     prompt_tokens = 0
     completion_tokens = 0
     data = None
+    http_attempts = []
     for _ in range(2):
-        payload, error = _call(extract.call_model, extract.load_key(), article)
+        spent = _usd(
+            prompt_tokens, completion_tokens,
+            extract.INPUT_USD_PER_TOKEN, extract.OUTPUT_USD_PER_TOKEN,
+        )
+        if extract.session_blocked(calls + len(http_attempts), usd + spent):
+            break
+        payload, error = _call(extract.call_model, key, article, http_attempts)
         if error:
-            return {"error": error, "called_model": False, "usd": 0.0}
+            cost = _usd(
+                prompt_tokens, completion_tokens,
+                extract.INPUT_USD_PER_TOKEN, extract.OUTPUT_USD_PER_TOKEN,
+            )
+            if prompt_tokens or completion_tokens:
+                log_cost("ui_extract", prompt_tokens, completion_tokens, cost)
+            return {
+                "error": error,
+                "called_model": bool(http_attempts),
+                "http_attempts": len(http_attempts),
+                "usd": cost,
+                "prompt_tokens": prompt_tokens,
+                "completion_tokens": completion_tokens,
+            }
         raw, piece_prompt, piece_completion = payload
         prompt_tokens += piece_prompt
         completion_tokens += piece_completion
         try:
             data = json.loads(raw)
-            break
+            if isinstance(data, dict):
+                break
+            data = None
         except json.JSONDecodeError:
             data = None
-    cost = prompt_tokens * extract.INPUT_USD_PER_TOKEN + completion_tokens * extract.OUTPUT_USD_PER_TOKEN
-    log_cost("ui_extract", prompt_tokens, completion_tokens, cost)
+    cost = _usd(
+        prompt_tokens, completion_tokens,
+        extract.INPUT_USD_PER_TOKEN, extract.OUTPUT_USD_PER_TOKEN,
+    )
+    if prompt_tokens or completion_tokens:
+        log_cost("ui_extract", prompt_tokens, completion_tokens, cost)
     if data is None:
         return {
             "error": "The model did not return JSON.",
-            "called_model": True,
-            "usd": round(cost, 6),
+            "called_model": bool(http_attempts),
+            "http_attempts": len(http_attempts),
+            "usd": cost,
             "prompt_tokens": prompt_tokens,
             "completion_tokens": completion_tokens,
         }
     errors = extract.l1_errors(data)
     fields = {field: data.get(field) for field in extract.FIELDS}
     return {
-        "called_model": True,
+        "called_model": bool(http_attempts),
+        "http_attempts": len(http_attempts),
         "l1_pass": not errors,
         "l1_errors": errors,
         "fields": fields,
-        "usd": round(cost, 6),
+        "usd": cost,
         "prompt_tokens": prompt_tokens,
         "completion_tokens": completion_tokens,
         "temperature": 0,

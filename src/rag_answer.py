@@ -33,7 +33,10 @@ def normalise(text):
 
 
 def load_key():
-    for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
+    path = ROOT / ".env"
+    if not path.is_file():
+        raise SystemExit("OPENROUTER_API_KEY is missing from .env")
+    for line in path.read_text(encoding="utf-8").splitlines():
         if line.startswith("OPENROUTER_API_KEY="):
             key = line.split("=", 1)[1].strip()
             if key:
@@ -57,7 +60,7 @@ def evidence_block(hits, chunks, categories):
     return "\n\n".join(lines)
 
 
-def call_model(key, question, evidence):
+def call_model(key, question, evidence, http_attempts=None):
     body = {
         "model": MODEL,
         "temperature": 0,
@@ -79,6 +82,8 @@ def call_model(key, question, evidence):
     )
     last_error = None
     for attempt in range(3):
+        if http_attempts is not None:
+            http_attempts.append(1)
         try:
             with urllib.request.urlopen(request, timeout=90) as response:
                 payload = json.loads(response.read().decode("utf-8"))

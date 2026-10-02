@@ -28,9 +28,24 @@ st.info(BANNER)
 
 
 def remember(result):
-    if result.get("called_model"):
-        st.session_state.calls += 1
-        st.session_state.usd += float(result.get("usd") or 0)
+    attempts = int(result.get("http_attempts") or 0)
+    if attempts <= 0:
+        return
+    st.session_state.calls += attempts
+    st.session_state.usd += float(result.get("usd") or 0)
+
+
+def show_passages(items, full_by_passage):
+    for item in items:
+        st.markdown(
+            f"Passage {item['passage']}, article {item['article_id']} "
+            f"({item['category']}), cosine {item['cosine']:.4f}"
+        )
+        full = full_by_passage.get(item["passage"], "")
+        st.write(item.get("snippet") or full[:240])
+        if full:
+            with st.expander("Full passage"):
+                st.write(full)
 
 
 def show_cost(result):
@@ -47,7 +62,7 @@ def load_classify_sample():
 
 
 def load_below_threshold():
-    st.session_state.classify_text = "hello"
+    st.session_state.classify_text = serve.below_threshold_article()
 
 
 def load_archive_question():
@@ -70,7 +85,7 @@ with classify_tab:
     with sample_col:
         st.button("Load sample article", key="load_classify", on_click=load_classify_sample)
     with short_col:
-        st.button("Load a text below the threshold", on_click=load_below_threshold)
+        st.button("Load a news article below the threshold", on_click=load_below_threshold)
     article = st.text_area("Article", key="classify_text", height=240)
     model_key = st.selectbox(
         "Classifier",
@@ -113,6 +128,8 @@ with ask_tab:
         remember(outcome)
         if outcome.get("error") and not outcome.get("answer"):
             st.error(outcome["error"])
+            if outcome.get("http_attempts"):
+                show_cost(outcome)
         else:
             if outcome.get("abstain"):
                 st.warning(outcome["answer"])
@@ -121,22 +138,13 @@ with ask_tab:
             else:
                 st.success(outcome["answer"])
                 st.write(f"Best cosine {outcome['best_cosine']:.4f}.")
+            full_by_passage = {item["passage"]: item.get("text", "") for item in outcome.get("passages", [])}
             if outcome.get("citations"):
                 st.subheader("Citations")
-                for item in outcome["citations"]:
-                    st.markdown(
-                        f"Passage {item['passage']}, article {item['article_id']} "
-                        f"({item['category']}), cosine {item['cosine']:.4f}"
-                    )
-                    st.write(item["snippet"])
+                show_passages(outcome["citations"], full_by_passage)
             elif outcome.get("passages"):
                 st.subheader("Passages checked")
-                for item in outcome["passages"]:
-                    st.markdown(
-                        f"Passage {item['passage']}, article {item['article_id']} "
-                        f"({item['category']}), cosine {item['cosine']:.4f}"
-                    )
-                    st.write(item["text"][:240])
+                show_passages(outcome["passages"], full_by_passage)
             show_cost(outcome)
 
 with extract_tab:
@@ -164,7 +172,7 @@ with st.sidebar:
     st.header("This session")
     st.write(f"Model calls: {st.session_state.calls} / {extract.SESSION_MAX_CALLS}")
     st.write(f"Cost: USD {st.session_state.usd:.4f} / {extract.SESSION_MAX_USD:.2f}")
-    st.caption("The page stops at 30 calls or USD 0.05, whichever comes first.")
+    st.caption("Each HTTP request counts. The page checks the cap before the next request. A request already sent can finish past this line.")
     st.caption("Price card: input USD 0.15 per million tokens, output USD 0.60 per million tokens.")
     st.caption(f"Generator: {extract.MODEL}, temperature 0.")
     st.caption(f"Archive answers use at most {rag_answer.MAX_TOKENS} tokens. Extraction uses at most {extract.MAX_TOKENS}.")
