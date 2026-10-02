@@ -92,13 +92,3 @@ The embedding cache in `data/embeddings/` is gitignored. If the vector files are
 `results/rag.json` and `results/extraction.json` are the saved scores. `src/rag_answer.py` and `src/extract.py` keep any id already in those files and do not call the generator again for it. They spend money only for a missing id. Do not delete those files unless you intend to pay for a new run. `src/keyword_baseline.py` and `src/retrieve.py` rewrite their own result files and do not call the generator.
 
 Do not run `scripts/make_split.py`. It rewrites the frozen split in `eval/clf_split.json`.
-
-## Submit
-
-Record with sound. Your face and the screen must both be visible. Aim for about 5 minutes. A video longer than 8 minutes is watched only through the first 8 minutes. Follow `writeup/demo_script.md`.
-
-Before pushing, `git status` must not list `.env` or `data/bbc-text.csv`.
-
-The public repository is https://github.com/ywSun04/NewsIQ.
-
-On NTULearn, submit `writeup/NewsIQ_tradeoff_analysis.pdf`, this repository URL, and the video. The problem statement was already submitted.
