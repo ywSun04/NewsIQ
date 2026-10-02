@@ -8,6 +8,10 @@ Priya's three jobs are fixed, so I did not use an agent. An agent would choose t
 
 I did not measure how long an editor spends on an article. A planning assumption of USD 20 an hour and 50 articles an hour is USD 0.40 per article. That number is an assumption, not a measured saving. I do not use F1 to claim that time was saved. The costs below are token costs from the runs.
 
+## What changes for Priya
+
+Today Priya reads each article, chooses a desk, searches the archive by memory, and copies names into a sheet. NewsIQ keeps those three jobs and changes the first pass. The classifier proposes a desk, an archive question returns a cited span, and extraction returns JSON she can check. She still owns the decision when the system abstains. Because the archive stops in 2005, the page does not replace a current newsroom system.
+
 ## Classification
 
 The objective in the proposal was weighted F1 above 0.85 on a stratified holdout of 100 articles. The split is seed 42: 1,925 train, 200 validation, 100 test. The test set was not used to fit a model, to edit the keyword list, or to choose a threshold.
@@ -31,3 +35,7 @@ The objective was field correctness above 0.75. The pre-registered rule is exact
 ## Controls
 
 If the best passage is below cosine 0.50, or the generator finds no answer in the passages, the page says the corpus does not contain sufficient evidence. An article below the classification threshold is not labelled; it is handed to a person. Answers are limited to 400 tokens and extraction to 500. A session stops at 30 calls or USD 0.05, whichever comes first. The page states that the corpus is BBC News 2004-2005 and is not for automated publishing, fact-checking, or legal review. I report per-class F1 so a weak class cannot hide in the average. These controls follow the Singapore IMDA Model AI Governance Framework on a stated purpose and human oversight, and they limit prompt injection as described in the OWASP Top 10 for LLM Applications 2025: the generator sees only the retrieved passages and must abstain when those passages do not contain the answer.
+
+## A later version
+
+I would not edit the gold to lift the 0.484 extraction score. A later version could ask a person to judge topic paraphrases, and it could drop the ten duplicate test articles before any training. I would not add an agent or a live feed until Priya trusts the abstention gate. That path is optional. It is not a result of this build.
