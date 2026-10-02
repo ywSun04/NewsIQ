@@ -26,6 +26,6 @@ An article id is the 0-based row index in that CSV. The same id is used in the s
 
 ## What is checked in
 
-`data/sample/` has one article text per class, for a quick look. Those samples are not the evaluation set.
+`data/sample/` has one article text per class, for a quick look. Those five are not the evaluation set. `below_threshold.txt` is article 1731 from the classification test split. The demo loads it only to show abstention. It is not a new evaluation.
 
 The evaluation rows are named by id in `eval/`. See `eval/EVALS.md`.
